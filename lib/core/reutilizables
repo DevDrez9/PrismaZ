@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+import 'package:salud_apps/core/Themes/util.theme.dart';
+import 'package:salud_apps/core/widgets/BotonGrande.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: false, // Fuerza el título a la izquierda
+        title: Text(
+          "Prisma Z",
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 37,
+          ),
+        ),
+        actions: [
+          // Botón 1
+          IconButton(
+            icon: Icon(
+              Icons.notifications,
+              color: Theme.of(context).colorScheme.surfaceTint,
+            ),
+            onPressed: () {
+              print("Notificaciones");
+            },
+          ),
+          // Botón 2
+          IconButton(
+            icon: Icon(
+              Icons.person_2,
+              color: Theme.of(context).colorScheme.primary,
+              size: 30,
+            ),
+            onPressed: () {
+              print("Configuración");
+            },
+          ),
+          const SizedBox(width: 8), // Pequeño espacio al final
+        ],
+      ),
+      body: Stack(
+        children: [
+          // Capa 1: La imagen de fondo
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/background.png'), // O NetworkImage
+                fit: BoxFit.cover, // Para que cubra toda la pantalla
+              ),
+            ),
+          ),
+          // Capa 2: Tu contenido real
+          SafeArea(
+            child: Column(children: [Row(children: [
+                   
+                  ],
+                )]),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+Theme.of(context).colorScheme.inversePrimary,
+style: Theme.of(context).textTheme.headlineMedium,
+
+
+Theme.of(context).textTheme.headlineMedium?.copyWith(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 37,
+          ),
+
+
+
+
