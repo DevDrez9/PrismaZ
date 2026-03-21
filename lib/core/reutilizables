@@ -1,3 +1,4 @@
+/** 
 import 'package:flutter/material.dart';
 import 'package:salud_apps/core/Themes/util.theme.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
@@ -26,7 +27,7 @@ class Homepage extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.notifications,
-              color: Theme.of(context).colorScheme.surfaceTint,
+              color: Theme.of(context).colorScheme.primaryContainer,
             ),
             onPressed: () {
               print("Notificaciones");
@@ -36,7 +37,7 @@ class Homepage extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.person_2,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.primaryContainer,
               size: 30,
             ),
             onPressed: () {
@@ -85,3 +86,4 @@ Theme.of(context).textTheme.headlineMedium?.copyWith(
 
 
 
+**/

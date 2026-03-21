@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:salud_apps/core/Themes/AppThem.dart';
 import 'package:salud_apps/core/widgets/BlurContainer.dart';
 
-class Cardprincipal extends StatelessWidget {
+class BotonGrandePrincipal extends StatelessWidget {
   final String? textoCard;
   final String imagen;
   final double? svgHeight;
   final Color? iconColor;
   final VoidCallback? onTap; // 1. Agregamos el callback de acción
 
-  const Cardprincipal({
+  const BotonGrandePrincipal({
     super.key,
     required this.textoCard,
     required this.imagen,
@@ -34,11 +34,10 @@ class Cardprincipal extends StatelessWidget {
           highlightColor: Colors.transparent,
           child: Container(
             width: AppTheme.getMainWidth80(context),
-            height: 80,
+            height: 200,
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-
               children: [
                 SizedBox(
                   height: svgHeight,
@@ -57,9 +56,9 @@ class Cardprincipal extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 18,
                   ),
                 ),
               ],

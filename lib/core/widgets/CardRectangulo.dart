@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:salud_apps/core/Themes/AppThem.dart';
 import 'package:salud_apps/core/widgets/BlurContainer.dart';
 
-class Cardprincipal extends StatelessWidget {
+class CardRectangulo extends StatelessWidget {
   final String? textoCard;
   final String imagen;
   final double? svgHeight;
   final Color? iconColor;
   final VoidCallback? onTap; // 1. Agregamos el callback de acción
 
-  const Cardprincipal({
+  const CardRectangulo({
     super.key,
     required this.textoCard,
     required this.imagen,
@@ -27,15 +27,17 @@ class Cardprincipal extends StatelessWidget {
       opacity: 0.8,
       child: Material(
         // 2. Agregamos Material para que el InkWell funcione
-        color: Colors.transparent, // Importante que sea transparente
+        color: Theme.of(context).colorScheme.primary.withOpacity(
+          0.1,
+        ), // Importante que sea transparente
         child: InkWell(
           onTap: onTap, // 3. Asignamos la acción
           splashColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
           highlightColor: Colors.transparent,
           child: Container(
-            width: AppTheme.getMainWidth80(context),
-            height: 80,
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            width: AppTheme.getMainWidth40(context),
+            height: 90,
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
 
@@ -57,7 +59,7 @@ class Cardprincipal extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                   ),

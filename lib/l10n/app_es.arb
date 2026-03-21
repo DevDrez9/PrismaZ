@@ -1,0 +1,148 @@
+{
+"@@locale": "es",
+  "home_appBarTitle": "Prisma Z",
+  "@home_appBarTitle": {
+    "description": "Nombre de la aplicación en la barra superior"
+  },
+  "home_welcomeMessage": "¡Hola! Aquí te acompaño",
+  "@home_welcomeMessage": {
+    "description": "Mensaje de bienvenida en el banner superior"
+  },
+  "home_cardChatBot": "Chat Bot",
+  "@home_cardChatBot": {
+    "description": "Etiqueta del botón para el módulo de Chat Bot"
+  },
+  "home_cardComunidad": "Comunidad",
+  "@home_cardComunidad": {
+    "description": "Etiqueta del botón para el módulo de Comunidad"
+  },
+
+  "home_cardMisDerechos": "Mis derechos",
+  "@home_cardMisDerechos": {
+    "description": "Etiqueta del botón para el módulo de Derechos"
+  },
+  "home_btnPolicia": "Estacion de policia mas cercano",
+  "@home_btnPolicia": {
+    "description": "Boton para ir al mapa y ver comisarias"
+  },
+  "home_btnTimer": "Ayuda",
+  "@home_btnTimer": {
+    "description": "Texto del boton de panico"
+  },
+
+  "asis_appBar":"Tú guia de asistencia legal",
+  "@asis_appBar":{
+    "description": "Texto del titulo del modulo"
+  },
+
+
+
+
+  "legal_title": "Tu guía de acción legal",
+  "@legal_title": {
+    "description": "Título principal de la pantalla de guía legal"
+  },
+  "legal_intro_text": "Si ha ocurrido algún accidente o tus derechos o integridad física fueron dañados o vulnerados explora los botones de acuerdo a tu necesidad. Recuerda primero buscar un lugar seguro.",
+  "@legal_intro_text": {
+    "description": "Texto instructivo de la parte superior"
+  },
+  "legal_btn_ayuda": "Ayuda",
+  "@legal_btn_ayuda": {
+    "description": "Botón con icono de corazón para ayuda rápida"
+  },
+  "legal_btn_denuncia": "Crea una denuncia",
+  "@legal_btn_denuncia": {
+    "description": "Botón con icono de documento para iniciar denuncia"
+  },
+  "legal_section_contacts": "Contactos legales",
+  "@legal_section_contacts": {
+    "description": "Título de la sección de lista de contactos"
+  },
+  "legal_btn_verTodos": "Ver todos",
+  "@legal_btn_verTodos": {
+    "description": "Botón pequeño verde para expandir contactos"
+  },
+  "legal_contact_name_placeholder": "Dra. Claudia Perez",
+  "legal_contact_specialty_placeholder": "Penalista, etc, etc",
+  "legal_footer_question": "¿No puedes hablar?",
+  "@legal_footer_question": {
+    "description": "Pregunta antes del botón de pánico o emergencia"
+  },
+  "legal_btn_hablaPorMi": "HABLA POR MI",
+  "@legal_btn_hablaPorMi": {
+    "description": "Botón rojo de acción urgente"
+  },
+
+
+
+  "der_titSex": "Mis Derechos Sexuales y Reproductivos",
+  "@der_titSex": { "description": "Título de la pantalla de derechos" },
+
+  "der_intro": "Conocer tus derechos es el primer paso para tomar el control de tu vida. Aquí te explicamos de forma clara qué puedes decidir y exigir sobre tu cuerpo y tu sexualidad. ¡Tu autonomía es prioridad!",
+  "@der_intro": { "description": "Texto introductorio" },
+
+  "der_sex_1": "Libertad Sexual",
+  "der_sex_1_content": "Tienes el poder de decidir cómo vivir y disfrutar tu sexualidad de forma libre, siempre que sea consensuada y no afecte los derechos de los demás. Nadie puede obligarte a hacer algo que no quieras.",
+
+  "der_sex_2": "Autonomía e Integridad de tu Cuerpo",
+  "der_sex_2_content": "Tú eres la única persona que decide sobre tu cuerpo. Tienes derecho a vivir sin miedo a la violencia, al acoso o a cualquier presión externa que intente controlar tus decisiones físicas.",
+
+  "der_sex_3": "Privacidad Sexual",
+  "der_sex_3_content": "Tus decisiones, conductas y preferencias sexuales pertenecen a tu ámbito íntimo. Tienes derecho a que se respete tu privacidad y a que nadie difunda información sobre tu vida sexual sin tu consentimiento.",
+
+  "der_sex_4": "Equidad y No Discriminación",
+  "der_sex_4_content": "Mereces vivir una vida plena sin importar tu sexo, identidad de género u orientación sexual. Tienes derecho a las mismas oportunidades y a estar protegido contra cualquier forma de rechazo o exclusión.",
+
+  "der_sex_5": "Placer Sexual",
+  "der_sex_5_content": "El placer es una parte natural y saludable de la vida. Tienes derecho a disfrutar de una sexualidad satisfactoria, segura y placentera, libre de culpas o imposiciones.",
+
+  "der_sex_6": "Expresión Emocional y Afectiva",
+  "der_sex_6_content": "La sexualidad no es solo contacto físico; también es afecto y comunicación. Tienes derecho a expresar tus sentimientos, amor y emociones de la forma que elijas, siempre en un marco de respeto mutuo.",
+
+  "der_sex_7": "Libre Asociación",
+  "der_sex_7_content": "Tú eliges con quién quieres compartir tu vida, tus afectos o tu sexualidad. Esto incluye decidir libremente si quieres casarte, vivir en unión libre o mantener cualquier tipo de relación sentimental.",
+
+  "der_sex_8": "Decisiones Reproductivas Libres",
+  "der_sex_8_content": "Es tu derecho decidir si quieres tener hijos o no, cuántos y en qué momento de tu vida. Esta elección debe ser voluntaria, responsable y libre de presiones sociales o familiares.",
+
+  "der_sex_9": "Información Científica y Objetiva",
+  "der_sex_9_content": "Tienes derecho a recibir información sobre sexualidad que sea real, actualizada y basada en la ciencia, no en mitos, prejuicios o creencias religiosas que puedan confundirte.",
+
+  "der_sex_10": "Educación Integral en Sexualidad (EIS)",
+  "der_sex_10_content": "Tienes derecho a recibir educación sexual desde joven. Esta formación debe ayudarte a entender tu cuerpo, tus emociones y a fortalecer tu capacidad de tomar decisiones informadas y responsables.",
+
+  "der_sex_11": "Atención a la Salud Sexual",
+  "der_sex_11_content": "Mereces servicios médicos de alta calidad. Tienes derecho a acceder a prevención, diagnósticos y tratamientos para cuidar tu salud sexual y reproductiva en un ambiente de confianza y respeto.",
+
+
+  "der_titRep": "Derechos Reproductivos",
+  "@der_titRep": {
+    "description": "Título de la sección de derechos reproductivos"
+  },
+
+  "der_rep_1": "Decidir sobre la maternidad o paternidad",
+  "der_rep_1_content": "Tienes la libertad total de elegir si quieres ser madre o padre, o si prefieres no serlo. Es una decisión personal y nadie puede presionarte para tomar un camino que no desees.",
+
+  "der_rep_2": "Planificación de tu familia",
+  "der_rep_2_content": "Tú decides cuántos hijos quieres tener (si es que quieres) y cuánto tiempo dejar pasar entre uno y otro. Tienes derecho a planificar tu vida a tu propio ritmo, sin imposiciones externas.",
+
+  "der_rep_3": "Acceso a métodos anticonceptivos",
+  "der_rep_3_content": "Tienes derecho a recibir métodos anticonceptivos que sean seguros, efectivos y fáciles de conseguir. El sistema de salud debe garantizar que el método que elijas esté disponible y sea aceptable para ti.",
+
+  "der_rep_4": "Maternidad Segura",
+  "der_rep_4_content": "Si decides tener un hijo, tienes derecho a recibir atención médica de calidad durante todo el proceso: el embarazo, el parto y los cuidados después del nacimiento (posparto) para proteger tu vida y tu salud.",
+
+  "der_rep_5": "Servicios de Salud Reproductiva",
+  "der_rep_5_content": "Tienes derecho a una atención integral que incluya desde la prevención de enfermedades hasta el tratamiento si tienes dificultades para concebir (infertilidad). La salud reproductiva va más allá de solo tener hijos.",
+
+  "der_rep_6": "Beneficios del Progreso Científico",
+  "der_rep_6_content": "Tienes derecho a beneficiarte de los avances de la ciencia. Esto significa tener acceso a las tecnologías y tratamientos más modernos y seguros que existan en el área de la salud reproductiva.",
+
+  "der_rep_7": "Interrupción Legal del Embarazo (ILE)",
+  "der_rep_7_content": "En Bolivia, tienes derecho a acceder a un aborto seguro y legal bajo las causales permitidas por la ley y la Sentencia Constitucional 0206/2014 (como casos de violación, incesto, estupro o cuando la vida o salud de la mujer corre peligro). Es un servicio que el sistema de salud debe garantizarte con respeto y sin prejuicios."
+
+
+  
+
+
+}

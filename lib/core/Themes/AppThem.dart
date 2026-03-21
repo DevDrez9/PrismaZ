@@ -14,8 +14,17 @@ class AppTheme {
     return MediaQuery.of(context).size.width * 0.8; // 90% del ancho de pantalla
   }
 
-  static double getMainWidth375(BuildContext context) {
+  static double getMainWidth60(BuildContext context) {
+    return MediaQuery.of(context).size.width * 0.6; // 90% del ancho de pantalla
+  }
+
+  static double getMainWidth30(BuildContext context) {
     return MediaQuery.of(context).size.width *
-        0.375; // 90% del ancho de pantalla
+        0.25; // 90% del ancho de pantalla
+  }
+
+  static double getMainWidth40(BuildContext context) {
+    return MediaQuery.of(context).size.width *
+        0.38; // 90% del ancho de pantalla
   }
 }

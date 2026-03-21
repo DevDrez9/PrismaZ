@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:salud_apps/core/Themes/AppThem.dart';
 import 'package:salud_apps/core/Themes/util.theme.dart';
+import 'package:salud_apps/core/constants/language_notifier.dart';
 import 'package:salud_apps/core/widgets/BlurContainer.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
+import 'package:salud_apps/core/widgets/BotonGrandePrincipal.dart';
+import 'package:salud_apps/core/widgets/CardRectangulo.dart';
 import 'package:salud_apps/core/widgets/CardIcono.dart';
 import 'package:salud_apps/core/widgets/CardPrincipal.dart';
 import 'package:salud_apps/core/widgets/CardTexto.dart';
+import 'package:salud_apps/features/AsistenciaLegal/AsistenciaLegal.dart';
+import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
       appBar: AppBar(
@@ -19,7 +27,7 @@ class Homepage extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Prisma Z",
+          l10n.home_appBarTitle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -27,11 +35,30 @@ class Homepage extends StatelessWidget {
           ),
         ),
         actions: [
+          PopupMenuButton<Locale>(
+            icon: const Icon(Icons.language),
+            onSelected: (Locale locale) {
+              // ¡Así de simple! Cambias el valor de la variable global
+              // y toda la app se actualiza al instante.
+              appLocale.value = locale;
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<Locale>>[
+              const PopupMenuItem<Locale>(
+                value: Locale('es', ''),
+                child: Text('Español'),
+              ),
+              const PopupMenuItem<Locale>(
+                value: Locale('ay', ''),
+                child: Text('Aymara'),
+              ),
+            ],
+          ),
+
           // Botón 1
           IconButton(
             icon: Icon(
               Icons.notifications,
-              color: Theme.of(context).colorScheme.surfaceTint,
+              color: Theme.of(context).colorScheme.primaryContainer,
             ),
             onPressed: () {
               print("Notificaciones");
@@ -41,7 +68,7 @@ class Homepage extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.person_2,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.primaryContainer,
               size: 30,
             ),
             onPressed: () {
@@ -67,9 +94,7 @@ class Homepage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Center(
-                  child: CardTexto(textoCard: "¡Hola! Aqui te acompañamos"),
-                ),
+                Center(child: CardTexto(textoCard: l10n.home_welcomeMessage)),
 
                 Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -79,64 +104,68 @@ class Homepage extends StatelessWidget {
                     alignment:
                         WrapAlignment.start, // Alineación de los elementos
                     children: [
+                      BotonGrandePrincipal(
+                        textoCard: "Asistencia Legal",
+                        imagen: "assets/gavel.svg",
+                        svgHeight: 100,
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            // Quitamos el "Replacement"
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  AsistenciaLegalPage(), // Tu nueva pantalla
+                            ),
+                          ),
+                        },
+                      ),
                       Cardprincipal(
-                        textoCard: "Salud y Educacion",
+                        textoCard: l10n.home_cardMisDerechos,
                         imagen: "assets/heart_check.svg",
                         iconColor: Colors.red,
-                        svgHeight: 100,
+                        svgHeight: 80,
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            // Quitamos el "Replacement"
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const Saludeducacionpage(), // Tu nueva pantalla
+                            ),
+                          ),
+                        },
                       ),
+
                       Cardprincipal(
-                        textoCard: "Mis derechos",
-                        imagen: "assets/gavel.svg",
+                        textoCard: l10n.home_cardChatBot,
+                        imagen: "assets/chat.svg",
                         iconColor: Colors.brown,
-                        svgHeight: 100,
+                        svgHeight: 80,
                       ),
+
                       Cardprincipal(
-                        textoCard: "Chat Bot",
+                        textoCard: l10n.home_cardComunidad,
                         imagen: "assets/chat.svg",
                         iconColor: Color(0xff2c8f93),
-                        svgHeight: 100,
-                      ),
-                      Cardprincipal(
-                        textoCard: "Comunidad",
-                        imagen: "assets/conversation.svg",
-                        iconColor: Colors.green,
-                        svgHeight: 100,
+                        svgHeight: 80,
                       ),
                     ],
                   ),
                 ),
 
-                Center(
-                  child: CardIconoTexto(
-                    texto:
-                        "Presioname para ver las farmacias mas cercanas de ti ",
-                    svgPath: "assets/foco.svg",
-                    iconSize: 32, // Icono más grande
-                    iconColor: Colors.green, // Icono rojo
-                    backgroundColor: Color(0xffa5d6a7), // Fondo rojizo
-                    backgroundOpacity: 0.7, // Muy sutil
-                    textColor: Colors.green,
-                    fontSize: 12,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Center(
-                  child: CardIconoTexto(
-                    texto: "Termporizador de seguridad",
-                    svgPath: "assets/hourglass.svg",
-                    iconPosition: IconPosition.right,
-                    iconSize: 32, // Icono más grande
-                    iconColor: Theme.of(
-                      context,
-                    ).colorScheme.tertiaryContainer, // Icono rojo
-                    backgroundColor: Theme.of(
-                      context,
-                    ).colorScheme.tertiary, // Fondo rojizo
-                    backgroundOpacity: 0.7, // Muy sutil
-                    textColor: Theme.of(context).colorScheme.tertiaryContainer,
-                    fontSize: 16,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CardRectangulo(
+                      textoCard: l10n.home_btnPolicia,
+                      imagen: "assets/chat.svg",
+                      svgHeight: 50,
+                    ),
+                    SizedBox(width: 10),
+                    CardRectangulo(
+                      textoCard: l10n.home_btnTimer,
+                      imagen: "assets/chat.svg",
+                      svgHeight: 50,
+                    ),
+                  ],
                 ),
               ],
             ),

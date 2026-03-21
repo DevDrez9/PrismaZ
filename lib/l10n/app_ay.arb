@@ -1,0 +1,136 @@
+{ 
+"@@locale": "ay",
+  "home_appBarTitle": "Prisma Z",
+  "@home_appBarTitle": {
+    "description": "Nombre de la aplicación en la barra superior"
+  },
+  "home_welcomeMessage": "¡Aläkipan! Aka ukaxa nayax kunaymana yanapt'añatakiwa",
+  "@home_welcomeMessage": {
+    "description": "Mensaje de bienvenida en el banner superior"
+  },
+  "home_cardChatBot": "Chat Bot",
+  "@home_cardChatBot": {
+    "description": "Etiqueta del botón para el módulo de Chat Bot"
+  },
+  "home_cardComunidad": "Marka",
+  "@home_cardComunidad": {
+    "description": "Etiqueta del botón para el módulo de Comunidad"
+  },
+  "home_cardSaludEducacion": "Jakaña utt'ayaña ukhamaraki Yatiqaña",
+  "@home_cardSaludEducacion": {
+    "description": "Etiqueta del botón para el módulo de Salud y Educación"
+  },
+  "home_cardMisDerechos": "Nayax kunjamsa ajllisiñanikta",
+  "@home_cardMisDerechos": {
+    "description": "Etiqueta del botón para el módulo de Derechos"
+  },
+  "home_btnFarmacia": "Aka ch'iqanchataxa qhanañchañatakiwa jiwas qayllankir farmacianakar.",
+  "@home_btnFarmacia": {
+    "description": "Texto descriptivo en el banner verde de farmacias"
+  },
+  "home_btnTimer": "Salvaguarda Pachanaka",
+  "@home_btnTimer": {
+    "description": "Texto dentro del botón morado inferior"
+  },
+
+
+
+  "legal_title": "Tu guía de acción legal",
+  "@legal_title": {
+    "description": "Título principal de la pantalla de guía legal"
+  },
+  "legal_intro_text": "Si ha ocurrido algún accidente o tus derechos o integridad física fueron dañados o vulnerados explora los botones de acuerdo a tu necesidad. Recuerda primero buscar un lugar seguro.",
+  "@legal_intro_text": {
+    "description": "Texto instructivo de la parte superior"
+  },
+  "legal_btn_ayuda": "Ayuda",
+  "@legal_btn_ayuda": {
+    "description": "Botón con icono de corazón para ayuda rápida"
+  },
+  "legal_btn_denuncia": "Crea una denuncia",
+  "@legal_btn_denuncia": {
+    "description": "Botón con icono de documento para iniciar denuncia"
+  },
+  "legal_section_contacts": "Contactos legales",
+  "@legal_section_contacts": {
+    "description": "Título de la sección de lista de contactos"
+  },
+  "legal_btn_verTodos": "Ver todos",
+  "@legal_btn_verTodos": {
+    "description": "Botón pequeño verde para expandir contactos"
+  },
+  "legal_contact_name_placeholder": "Dra. Claudia Perez",
+  "legal_contact_specialty_placeholder": "Penalista, etc, etc",
+  "legal_footer_question": "¿No puedes hablar?",
+  "@legal_footer_question": {
+    "description": "Pregunta antes del botón de pánico o emergencia"
+  },
+  "legal_btn_hablaPorMi": "HABLA POR MI",
+  "@legal_btn_hablaPorMi": {
+    "description": "Botón rojo de acción urgente"
+  },
+
+
+
+  "der_titSex": "Janchisan jark'aqasiñanaka",
+  "der_intro": "Jark'aqasiñanaka uñt'añax nayrïr thakhikiwa sum jakañataki. Akanx janchisat uñt'añataki ukhamarak amtañatakiw yatichasini.",
+
+  "der_sex_1": "Munat lurañawi",
+  "der_sex_1_content": "Jumaw amtañama kunjams janchim uñjasiñama, janipuniw khitis obligarjamäkiti jan munat lurañataki.",
+
+  "der_sex_2": "Janchisan munañapa",
+  "der_sex_2_content": "Jumakiw janchimat amtax lurañama. Jan pirus axsarañamäkiti, janirakiw khitis janchim t'unjañapäkiti.",
+
+  "der_sex_3": "Imantatäwi",
+  "der_sex_3_content": "Munañanakamax imantatäñapawa. Jan khitis yatiñapäkiti jan jumax munapkstaxa.",
+
+  "der_sex_4": "Taqpachani mayaki",
+  "der_sex_4_content": "Taqpachanix mayakipxtana, jan khitis jisk'achañapäkiti kunjams jach'achaski ukataki.",
+
+  "der_sex_5": "Kusisiñawi",
+  "der_sex_5_content": "Kusisiñax janchisan askipawa. Jumax derecho churatawa sum jakañataki jan pirus axsarañampi.",
+
+  "der_sex_6": "Chuymat arsuña",
+  "der_sex_6_content": "Aruskipawix chuymat jutañapawa. Munasiñamasa ukhamarak llakisiñamasa arsuñamawa sum uñjasiñataki.",
+
+  "der_sex_7": "Jaqi thaqhañawi",
+  "der_sex_7_content": "Khutimpis jakañam munasta ukax juman amtañamawa. Jaqichasiñataki jan ukax sum uñjasiñataki.",
+
+  "der_sex_8": "Wawa katuñat amtaña",
+  "der_sex_8_content": "Wawa katuñat amtañax juman derecho-mawa. Qawqha wawas katuñama uka amtañax juman munañamawa.",
+
+  "der_sex_9": "Chiqpach yatiyäwinaka",
+  "der_sex_9_content": "Jumax derecho churatawa chiqpach yatiyäwinaka katuñataki, jan k'ari arunaka ist'añataki.",
+
+  "der_sex_10": "Janchisan yatichawi",
+  "der_sex_10_content": "Wawa pachatpachaw janchisat yatichasiñapa, sum amtañanak lurañataki ukhamarak janchis uñt'añataki.",
+
+  "der_sex_11": "Qulla uñjawi",
+  "der_sex_11_content": "Qulla utanakanx sum uñjatäñamawa. Usunakat jark'aqasiñataki ukhamarak qulla katuñataki.",
+
+
+  "der_rep_titRep": "Wawa katuñat amtawinaka",
+
+  "der_rep_1": "Wawa katuñat amtaña",
+  "der_rep_1_content": "Jumax derecho churatawa amtañataki: wawa katuñati jan ukax janiwati. Juman amtañamawa, jan khitis obligarjamäkiti.",
+
+  "der_rep_2": "Familia amtaña",
+  "der_rep_2_content": "Qawqha wawas katuñama uka amtañax juman munañamawa. Jan khitis juman munañamarux mantaspa.",
+
+  "der_rep_3": "Usunakat jark'aqasiñataki",
+  "der_rep_3_content": "Jumax derecho churatawa qullanaka katuñataki jan wawa katuñataki. Qulla utanakanx utjañapawa jumax munasma uka qullanaka.",
+
+  "der_rep_4": "K'umara wawa katuñawi",
+  "der_rep_4_content": "Wawa katuñ amtaskstaxa, sum uñjatäñamawa: usu pachasa, wawa yuritasa ukat ukxarusa, janchim sum uñjañataki.",
+
+  "der_rep_5": "Qulla utan yanapaña",
+  "der_rep_5_content": "Taqpacha qulla uñjawi katuñamawa, jan wawa katuñjamäkaspas ukhasa yanapatañamawa. Qulla uñjawix jach'awa.",
+
+  "der_rep_6": "Yatiñat yanapaña",
+  "der_rep_6_content": "Derecho churatawa machaq yatiñanaka katuñataki. Machaq qullanaka ukat uñjawinaka katuñamawa.",
+
+  "der_rep_7": "Ley tuqit aborto lurawita (ILE)",
+  "der_rep_7_content": "Bolivia markanxa, jumax derecho churatawa aborto lurayañataki ley tuqita (SC 0206/2014). Violación utjaski ukhax jan ukax janchimax llakiñankaski ukhax sum uñjatäñamawa jan pirus jisk'achañampi."
+
+  
+}
