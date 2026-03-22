@@ -3,9 +3,6 @@
   "home_appBarTittle": "Yanapiru",
   "@home_appBarTittle": { "description": "Nombre de la app en la barra superior" },
 
-  "home_mensajeBienvenida": "¡Hola! Aqui te acompaño",
-  "@home_mensajeBienvenida": { "description": "Banner de saludo superior" },
-
   "home_asistencia": "Asesoria legal",
   "home_asistencia_sub1": "• Violencia Sexual",
   "home_asistencia_sub2": "• ILE",
@@ -19,6 +16,17 @@
 
   "home_quieroCalma": "Quiero calmarme",
   "@home_quieroCalma": { "description": "Texto del botón turquesa inferior" },
+
+  "home_btProtocolo":"Protocolo de 72 horas",
+  "home_btProtocolo_desc":"(En casos de violencia Sexual)",
+
+  "modaa_title": "Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?",
+  "modal_btn1": "Quiero calmarme",
+  "modal_btn1_desc": "(Contención emocional)",
+  "modal_btn2": "Fui Victima de violencia sexual",
+  "modal_btn2_desc": "(Guia de 72 horas)",
+  "modal_btn3": "Explorar App",
+  "modal_btn3_desc": "(Asistencia Legal)",
 
   "card_1":"Violencia Sexual",
   "card_2":"I.L.E",

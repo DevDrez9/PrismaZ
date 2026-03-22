@@ -1,7 +1,6 @@
 { 
 "@@locale": "ay",
   "home_appBarTittle": "Yanapiri",
-  "home_mensajeBienvenida": "¡Kamisaki! Nayaw yanapaskäma",
 
   "home_asistencia": "Ley tuqit yanapaña",
   "home_asistencia_sub1": "• Jan walt'ayasiñataki",
@@ -14,6 +13,17 @@
   "home_policia": "Policiataki nint'ita",
 
   "home_quieroCalma": "Sumat amuyt'asiñäni",
+
+  "home_btProtocolo": "72 pacha thakhi",
+  "home_btProtocolo_desc": "(Janchisar jan walt'ayäwi tuqita)",
+
+  "modal_title": "Akanpxtwa jumataki \n ¿Kuna yanapas munasini?",
+  "modal_btn1": "Sumat amuyt'asiñ munta",
+  "modal_btn1_desc": "(Chuymachäwi)",
+  "modal_btn2": "Janchisaru jan walt'ayatätwa",
+  "modal_btn2_desc": "(72 pacha thakhi)",
+  "modal_btn3": "Yanapiri uñt'aña",
+  "modal_btn3_desc": "(Ley tuqit yanapa)",
 
   "card_1": "Janchisar jan walt'ayäwi",
   "card_2": "I.L.E (Wawa pichuyaña)",
