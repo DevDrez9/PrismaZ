@@ -98,53 +98,83 @@ abstract class AppLocalizations {
     Locale('es'),
   ];
 
-  /// Nombre de la aplicación en la barra superior
+  /// Nombre de la app en la barra superior
   ///
   /// In es, this message translates to:
-  /// **'Prisma Z'**
-  String get home_appBarTitle;
+  /// **'Yanapiri'**
+  String get home_appBarTittle;
 
-  /// Mensaje de bienvenida en el banner superior
+  /// Banner de saludo superior
   ///
   /// In es, this message translates to:
-  /// **'¡Hola! Aquí te acompaño'**
-  String get home_welcomeMessage;
+  /// **'¡Hola! Aqui te acompaño'**
+  String get home_mensajeBienvenida;
 
-  /// Etiqueta del botón para el módulo de Chat Bot
+  /// No description provided for @home_asistencia.
+  ///
+  /// In es, this message translates to:
+  /// **'Asesoria legal'**
+  String get home_asistencia;
+
+  /// No description provided for @home_asistencia_sub1.
+  ///
+  /// In es, this message translates to:
+  /// **'• Violencia Sexual'**
+  String get home_asistencia_sub1;
+
+  /// No description provided for @home_asistencia_sub2.
+  ///
+  /// In es, this message translates to:
+  /// **'• ILE'**
+  String get home_asistencia_sub2;
+
+  /// No description provided for @home_chatBot.
   ///
   /// In es, this message translates to:
   /// **'Chat Bot'**
-  String get home_cardChatBot;
+  String get home_chatBot;
 
-  /// Etiqueta del botón para el módulo de Comunidad
+  /// No description provided for @home_aprender.
+  ///
+  /// In es, this message translates to:
+  /// **'Aprender'**
+  String get home_aprender;
+
+  /// No description provided for @home_comunidad.
   ///
   /// In es, this message translates to:
   /// **'Comunidad'**
-  String get home_cardComunidad;
+  String get home_comunidad;
 
-  /// Etiqueta del botón para el módulo de Derechos
+  /// Texto del botón amarillo
   ///
   /// In es, this message translates to:
-  /// **'Mis derechos'**
-  String get home_cardMisDerechos;
+  /// **'Estacion de Policias mas cercanos'**
+  String get home_policia;
 
-  /// Boton para ir al mapa y ver comisarias
+  /// Texto del botón turquesa inferior
   ///
   /// In es, this message translates to:
-  /// **'Estacion de policia mas cercano'**
-  String get home_btnPolicia;
+  /// **'Quiero calmarme'**
+  String get home_quieroCalma;
 
-  /// Texto del boton de panico
+  /// No description provided for @card_1.
   ///
   /// In es, this message translates to:
-  /// **'Ayuda'**
-  String get home_btnTimer;
+  /// **'Violencia Sexual'**
+  String get card_1;
 
-  /// Texto del titulo del modulo
+  /// No description provided for @card_2.
   ///
   /// In es, this message translates to:
-  /// **'Tú guia de asistencia legal'**
-  String get asis_appBar;
+  /// **'I.L.E'**
+  String get card_2;
+
+  /// No description provided for @card_3.
+  ///
+  /// In es, this message translates to:
+  /// **'Discriminacion en Salud'**
+  String get card_3;
 
   /// Título principal de la pantalla de guía legal
   ///
@@ -439,6 +469,234 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'En Bolivia, tienes derecho a acceder a un aborto seguro y legal bajo las causales permitidas por la ley y la Sentencia Constitucional 0206/2014 (como casos de violación, incesto, estupro o cuando la vida o salud de la mujer corre peligro). Es un servicio que el sistema de salud debe garantizarte con respeto y sin prejuicios.'**
   String get der_rep_7_content;
+
+  /// No description provided for @drop_der1.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Qué hacer si viviste violencia sexual?'**
+  String get drop_der1;
+
+  /// No description provided for @drop_der1_intro.
+  ///
+  /// In es, this message translates to:
+  /// **'¡No estás sola/o! La violencia es un delito. Antes de elegir qué hacer, hay algo muy importante que debes saber: No te bañes ni botes la ropa que tenías puesta en ese momento. Sabemos que es difícil, pero esto servirá como prueba para el juicio contra tu agresor.'**
+  String get drop_der1_intro;
+
+  /// No description provided for @drop_der1_derSex.
+  ///
+  /// In es, this message translates to:
+  /// **'Quiero denunciar primero.'**
+  String get drop_der1_derSex;
+
+  /// No description provided for @drop_der1_derSex_paso1.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 1: Busca ayuda y presenta tu denuncia'**
+  String get drop_der1_derSex_paso1;
+
+  /// No description provided for @drop_der1_derSex_paso1_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes acudir a cualquiera de estas instituciones para denunciar:\n• FELCV (Fuerza Especial de Lucha contra la Violencia).\n• Fiscalía o Ministerio Público.\n• Autoridades de tu comunidad (área rural).\n\nTambién puedes buscar apoyo en: SLIM, Defensorías (DNA) o SIJPLU.'**
+  String get drop_der1_derSex_paso1_content;
+
+  /// No description provided for @drop_der1_derSex_paso1_btn.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar estación policial más cercana'**
+  String get drop_der1_derSex_paso1_btn;
+
+  /// No description provided for @drop_der1_derSex_paso2.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 2: Exige tu copia'**
+  String get drop_der1_derSex_paso2;
+
+  /// No description provided for @drop_der1_derSex_paso2_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Una vez que hagas la denuncia, exige que te entreguen una copia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.'**
+  String get drop_der1_derSex_paso2_content;
+
+  /// No description provided for @drop_der1_derSex_paso3.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 3: Ve al centro de salud'**
+  String get drop_der1_derSex_paso3;
+
+  /// No description provided for @drop_der1_derSex_paso3_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Las autoridades te derivarán a un servicio de salud para que te curen y te protejan.'**
+  String get drop_der1_derSex_paso3_content;
+
+  /// No description provided for @drop_der1_derSex_paso3_btn.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar Centro de Salud más cercano'**
+  String get drop_der1_derSex_paso3_btn;
+
+  /// No description provided for @drop_der1_derRep.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesito ir a un médico primero.'**
+  String get drop_der1_derRep;
+
+  /// No description provided for @drop_der1_derRep_paso1.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 1: Ve directamente a un centro de salud'**
+  String get drop_der1_derRep_paso1;
+
+  /// No description provided for @drop_der1_derRep_paso1_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Si te sientes mal, herida o prefieres ver a un médico antes de ir a la policía, acude a cualquier establecimiento de salud.'**
+  String get drop_der1_derRep_paso1_content;
+
+  /// No description provided for @drop_der1_derRep_paso1_btn.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar Centro de Salud'**
+  String get drop_der1_derRep_paso1_btn;
+
+  /// No description provided for @drop_der1_derRep_paso2.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 2: Recibe atención médica'**
+  String get drop_der1_derRep_paso2;
+
+  /// No description provided for @drop_der1_derRep_paso2_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Allí curarán tus heridas, te darán apoyo psicológico y tomarán las muestras necesarias para el proceso judicial.'**
+  String get drop_der1_derRep_paso2_content;
+
+  /// No description provided for @drop_der1_derRep_paso3.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso 3: Ellos harán la denuncia por ti'**
+  String get drop_der1_derRep_paso3;
+
+  /// No description provided for @drop_der1_derRep_paso3_content.
+  ///
+  /// In es, this message translates to:
+  /// **'El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.'**
+  String get drop_der1_derRep_paso3_content;
+
+  /// No description provided for @drop_der1_infoMed_title.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Qué pasará en el centro de salud?'**
+  String get drop_der1_infoMed_title;
+
+  /// No description provided for @drop_der1_infoMed_72h_low.
+  ///
+  /// In es, this message translates to:
+  /// **'Si llegas en las primeras 72 horas:\n• Pastilla de emergencia.\n• Prevención de ITS y VIH.\n• Recolección de evidencias.\n• Contención emocional.'**
+  String get drop_der1_infoMed_72h_low;
+
+  /// No description provided for @drop_der1_infoMed_72h_high.
+  ///
+  /// In es, this message translates to:
+  /// **'Si pasaron más de 72 horas:\n• Pruebas de embarazo y VIH.\n• Muestras médico legales.\n• Tratamiento postraumático.'**
+  String get drop_der1_infoMed_72h_high;
+
+  /// No description provided for @ile_title.
+  ///
+  /// In es, this message translates to:
+  /// **'Conoce tus derechos reproductivos ILE'**
+  String get ile_title;
+
+  /// No description provided for @ile_subtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Interrupción Legal del Embarazo (ILE)'**
+  String get ile_subtitle;
+
+  /// No description provided for @ile_definition.
+  ///
+  /// In es, this message translates to:
+  /// **'Si quedas embarazada producto de una violación, estupro o incesto, tienes derecho a interrumpir el embarazo si así lo decides. Es tu cuerpo, es tu decisión.'**
+  String get ile_definition;
+
+  /// No description provided for @ile_req_title.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Qué necesitas?'**
+  String get ile_req_title;
+
+  /// No description provided for @ile_req_content.
+  ///
+  /// In es, this message translates to:
+  /// **'Según la Sentencia Constitucional 0206/2014, para acceder a este servicio en cualquier centro de salud solo necesitas:\n• Tu consentimiento (tú firmas la solicitud).\n• Una copia de la denuncia (no necesitas que el juicio haya terminado).'**
+  String get ile_req_content;
+
+  /// No description provided for @ile_extra_info_title.
+  ///
+  /// In es, this message translates to:
+  /// **'Información que debes saber:'**
+  String get ile_extra_info_title;
+
+  /// No description provided for @ile_extra_info_points.
+  ///
+  /// In es, this message translates to:
+  /// **'• Es Gratuito: El sistema público debe cubrir todo sin costo.\n• Sin Jueces: No necesitas una orden judicial ni permiso de tus padres si eres mayor de edad (y si eres menor, prima tu interés superior).\n• Confidencial: Nadie puede revelar tu información sin tu permiso.\n• Atención Inmediata: No pueden ponerte trabas ni retrasar el procedimiento.'**
+  String get ile_extra_info_points;
+
+  /// Lema final sobre derechos reproductivos
+  ///
+  /// In es, this message translates to:
+  /// **'Recuerda: Tú decides, la sociedad respeta, el Estado garantiza.'**
+  String get ile_footer;
+
+  /// Título principal de la pantalla de relajación
+  ///
+  /// In es, this message translates to:
+  /// **'Manten la calma. No estás sola.'**
+  String get safe_calm_title;
+
+  /// Instrucción secundaria debajo del título
+  ///
+  /// In es, this message translates to:
+  /// **'Respira profundo, hazlo con calma'**
+  String get safe_calm_subtitle;
+
+  /// Texto dentro del botón para comenzar el ejercicio
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar respiración'**
+  String get safe_calm_btn_start;
+
+  /// Título de la sección de consejos rápidos
+  ///
+  /// In es, this message translates to:
+  /// **'Paso a paso para calmarte'**
+  String get safe_calm_steps_title;
+
+  /// No description provided for @safe_calm_step1.
+  ///
+  /// In es, this message translates to:
+  /// **'Toma asiento y relaja los hombros'**
+  String get safe_calm_step1;
+
+  /// No description provided for @safe_calm_step2.
+  ///
+  /// In es, this message translates to:
+  /// **'Bebe un poco de agua lentamente'**
+  String get safe_calm_step2;
+
+  /// No description provided for @safe_calm_step3.
+  ///
+  /// In es, this message translates to:
+  /// **'Respira y habla con una voz tranquila'**
+  String get safe_calm_step3;
+
+  /// No description provided for @safe_calm_step4.
+  ///
+  /// In es, this message translates to:
+  /// **'Estira suavemente tus manos y el cuello'**
+  String get safe_calm_step4;
 }
 
 class _AppLocalizationsDelegate

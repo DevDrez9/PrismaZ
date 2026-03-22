@@ -5,31 +5,43 @@ import 'package:salud_apps/core/widgets/BlurContainer.dart';
 
 class Cardprincipal extends StatelessWidget {
   final String? textoCard;
-  final String imagen;
+  final String? imagen;
+  final bool isImageRight;
   final double? svgHeight;
   final Color? iconColor;
-  final VoidCallback? onTap; // 1. Agregamos el callback de acción
+  final Color? colorTexto;
+  final Color? contenedorColor; // 1. ¡Declaramos la nueva variable!
+  final VoidCallback? onTap;
+  final double? opacityBlur;
 
   const Cardprincipal({
     super.key,
     required this.textoCard,
-    required this.imagen,
+    this.imagen,
+    this.isImageRight = false,
     this.svgHeight = 100.0,
     this.iconColor,
-    this.onTap, // Parámetro opcional
+    this.opacityBlur = 0.5,
+    this.colorTexto,
+    this.contenedorColor, // 2. La pedimos en el constructor
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
+    final bool hasImage = imagen != null && imagen!.isNotEmpty;
+
     return BlurContainer(
-      color: Theme.of(context).colorScheme.primaryContainer,
+      // 3. ¡LA MAGIA! Usamos tu color. Si no mandas ninguno (??), usa el del Tema por defecto.
+      color: contenedorColor ?? Theme.of(context).colorScheme.primaryContainer,
+
       showShadow: true,
-      opacity: 0.8,
+      opacity: opacityBlur!,
+
       child: Material(
-        // 2. Agregamos Material para que el InkWell funcione
-        color: Colors.transparent, // Importante que sea transparente
+        color: Colors.transparent,
         child: InkWell(
-          onTap: onTap, // 3. Asignamos la acción
+          onTap: onTap,
           splashColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
           highlightColor: Colors.transparent,
           child: Container(
@@ -38,30 +50,53 @@ class Cardprincipal extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-
               children: [
-                SizedBox(
-                  height: svgHeight,
-                  child: SvgPicture.asset(
-                    imagen,
-                    fit: BoxFit.contain,
-                    colorFilter: iconColor != null
-                        ? ColorFilter.mode(iconColor!, BlendMode.srcIn)
-                        : null,
+                // --- SVG A LA IZQUIERDA ---
+                if (hasImage && !isImageRight) ...[
+                  SizedBox(
+                    height: svgHeight,
+                    child: SvgPicture.asset(
+                      imagen!,
+                      fit: BoxFit.contain,
+                      colorFilter: iconColor != null
+                          ? ColorFilter.mode(iconColor!, BlendMode.srcIn)
+                          : null,
+                    ),
+                  ),
+                  const SizedBox(width: 15),
+                ],
+
+                // --- TEXTO ---
+                Expanded(
+                  child: Text(
+                    textoCard ?? "",
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color:
+                          colorTexto ??
+                          Theme.of(context).colorScheme.inverseSurface,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
-                const SizedBox(width: 15),
-                Text(
-                  textoCard ?? "",
-                  textAlign: TextAlign.center,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
+
+                // --- SVG A LA DERECHA ---
+                if (hasImage && isImageRight) ...[
+                  const SizedBox(width: 15),
+                  SizedBox(
+                    height: svgHeight,
+                    child: SvgPicture.asset(
+                      imagen!,
+                      fit: BoxFit.contain,
+                      colorFilter: iconColor != null
+                          ? ColorFilter.mode(iconColor!, BlendMode.srcIn)
+                          : null,
+                    ),
                   ),
-                ),
+                ],
               ],
             ),
           ),

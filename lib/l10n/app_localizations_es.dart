@@ -9,28 +9,43 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get home_appBarTitle => 'Prisma Z';
+  String get home_appBarTittle => 'Yanapiri';
 
   @override
-  String get home_welcomeMessage => '¡Hola! Aquí te acompaño';
+  String get home_mensajeBienvenida => '¡Hola! Aqui te acompaño';
 
   @override
-  String get home_cardChatBot => 'Chat Bot';
+  String get home_asistencia => 'Asesoria legal';
 
   @override
-  String get home_cardComunidad => 'Comunidad';
+  String get home_asistencia_sub1 => '• Violencia Sexual';
 
   @override
-  String get home_cardMisDerechos => 'Mis derechos';
+  String get home_asistencia_sub2 => '• ILE';
 
   @override
-  String get home_btnPolicia => 'Estacion de policia mas cercano';
+  String get home_chatBot => 'Chat Bot';
 
   @override
-  String get home_btnTimer => 'Ayuda';
+  String get home_aprender => 'Aprender';
 
   @override
-  String get asis_appBar => 'Tú guia de asistencia legal';
+  String get home_comunidad => 'Comunidad';
+
+  @override
+  String get home_policia => 'Estacion de Policias mas cercanos';
+
+  @override
+  String get home_quieroCalma => 'Quiero calmarme';
+
+  @override
+  String get card_1 => 'Violencia Sexual';
+
+  @override
+  String get card_2 => 'I.L.E';
+
+  @override
+  String get card_3 => 'Discriminacion en Salud';
 
   @override
   String get legal_title => 'Tu guía de acción legal';
@@ -198,4 +213,134 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get der_rep_7_content =>
       'En Bolivia, tienes derecho a acceder a un aborto seguro y legal bajo las causales permitidas por la ley y la Sentencia Constitucional 0206/2014 (como casos de violación, incesto, estupro o cuando la vida o salud de la mujer corre peligro). Es un servicio que el sistema de salud debe garantizarte con respeto y sin prejuicios.';
+
+  @override
+  String get drop_der1 => '¿Qué hacer si viviste violencia sexual?';
+
+  @override
+  String get drop_der1_intro =>
+      '¡No estás sola/o! La violencia es un delito. Antes de elegir qué hacer, hay algo muy importante que debes saber: No te bañes ni botes la ropa que tenías puesta en ese momento. Sabemos que es difícil, pero esto servirá como prueba para el juicio contra tu agresor.';
+
+  @override
+  String get drop_der1_derSex => 'Quiero denunciar primero.';
+
+  @override
+  String get drop_der1_derSex_paso1 =>
+      'Paso 1: Busca ayuda y presenta tu denuncia';
+
+  @override
+  String get drop_der1_derSex_paso1_content =>
+      'Puedes acudir a cualquiera de estas instituciones para denunciar:\n• FELCV (Fuerza Especial de Lucha contra la Violencia).\n• Fiscalía o Ministerio Público.\n• Autoridades de tu comunidad (área rural).\n\nTambién puedes buscar apoyo en: SLIM, Defensorías (DNA) o SIJPLU.';
+
+  @override
+  String get drop_der1_derSex_paso1_btn =>
+      'Buscar estación policial más cercana';
+
+  @override
+  String get drop_der1_derSex_paso2 => 'Paso 2: Exige tu copia';
+
+  @override
+  String get drop_der1_derSex_paso2_content =>
+      'Una vez que hagas la denuncia, exige que te entreguen una copia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.';
+
+  @override
+  String get drop_der1_derSex_paso3 => 'Paso 3: Ve al centro de salud';
+
+  @override
+  String get drop_der1_derSex_paso3_content =>
+      'Las autoridades te derivarán a un servicio de salud para que te curen y te protejan.';
+
+  @override
+  String get drop_der1_derSex_paso3_btn => 'Buscar Centro de Salud más cercano';
+
+  @override
+  String get drop_der1_derRep => 'Necesito ir a un médico primero.';
+
+  @override
+  String get drop_der1_derRep_paso1 =>
+      'Paso 1: Ve directamente a un centro de salud';
+
+  @override
+  String get drop_der1_derRep_paso1_content =>
+      'Si te sientes mal, herida o prefieres ver a un médico antes de ir a la policía, acude a cualquier establecimiento de salud.';
+
+  @override
+  String get drop_der1_derRep_paso1_btn => 'Buscar Centro de Salud';
+
+  @override
+  String get drop_der1_derRep_paso2 => 'Paso 2: Recibe atención médica';
+
+  @override
+  String get drop_der1_derRep_paso2_content =>
+      'Allí curarán tus heridas, te darán apoyo psicológico y tomarán las muestras necesarias para el proceso judicial.';
+
+  @override
+  String get drop_der1_derRep_paso3 => 'Paso 3: Ellos harán la denuncia por ti';
+
+  @override
+  String get drop_der1_derRep_paso3_content =>
+      'El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.';
+
+  @override
+  String get drop_der1_infoMed_title => '¿Qué pasará en el centro de salud?';
+
+  @override
+  String get drop_der1_infoMed_72h_low =>
+      'Si llegas en las primeras 72 horas:\n• Pastilla de emergencia.\n• Prevención de ITS y VIH.\n• Recolección de evidencias.\n• Contención emocional.';
+
+  @override
+  String get drop_der1_infoMed_72h_high =>
+      'Si pasaron más de 72 horas:\n• Pruebas de embarazo y VIH.\n• Muestras médico legales.\n• Tratamiento postraumático.';
+
+  @override
+  String get ile_title => 'Conoce tus derechos reproductivos ILE';
+
+  @override
+  String get ile_subtitle => 'Interrupción Legal del Embarazo (ILE)';
+
+  @override
+  String get ile_definition =>
+      'Si quedas embarazada producto de una violación, estupro o incesto, tienes derecho a interrumpir el embarazo si así lo decides. Es tu cuerpo, es tu decisión.';
+
+  @override
+  String get ile_req_title => '¿Qué necesitas?';
+
+  @override
+  String get ile_req_content =>
+      'Según la Sentencia Constitucional 0206/2014, para acceder a este servicio en cualquier centro de salud solo necesitas:\n• Tu consentimiento (tú firmas la solicitud).\n• Una copia de la denuncia (no necesitas que el juicio haya terminado).';
+
+  @override
+  String get ile_extra_info_title => 'Información que debes saber:';
+
+  @override
+  String get ile_extra_info_points =>
+      '• Es Gratuito: El sistema público debe cubrir todo sin costo.\n• Sin Jueces: No necesitas una orden judicial ni permiso de tus padres si eres mayor de edad (y si eres menor, prima tu interés superior).\n• Confidencial: Nadie puede revelar tu información sin tu permiso.\n• Atención Inmediata: No pueden ponerte trabas ni retrasar el procedimiento.';
+
+  @override
+  String get ile_footer =>
+      'Recuerda: Tú decides, la sociedad respeta, el Estado garantiza.';
+
+  @override
+  String get safe_calm_title => 'Manten la calma. No estás sola.';
+
+  @override
+  String get safe_calm_subtitle => 'Respira profundo, hazlo con calma';
+
+  @override
+  String get safe_calm_btn_start => 'Iniciar respiración';
+
+  @override
+  String get safe_calm_steps_title => 'Paso a paso para calmarte';
+
+  @override
+  String get safe_calm_step1 => 'Toma asiento y relaja los hombros';
+
+  @override
+  String get safe_calm_step2 => 'Bebe un poco de agua lentamente';
+
+  @override
+  String get safe_calm_step3 => 'Respira y habla con una voz tranquila';
+
+  @override
+  String get safe_calm_step4 => 'Estira suavemente tus manos y el cuello';
 }

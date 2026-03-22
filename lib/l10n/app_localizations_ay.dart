@@ -9,29 +9,43 @@ class AppLocalizationsAy extends AppLocalizations {
   AppLocalizationsAy([String locale = 'ay']) : super(locale);
 
   @override
-  String get home_appBarTitle => 'Prisma Z';
+  String get home_appBarTittle => 'Yanapiri';
 
   @override
-  String get home_welcomeMessage =>
-      '¡Aläkipan! Aka ukaxa nayax kunaymana yanapt\'añatakiwa';
+  String get home_mensajeBienvenida => '¡Kamisaki! Nayaw yanapaskäma';
 
   @override
-  String get home_cardChatBot => 'Chat Bot';
+  String get home_asistencia => 'Ley tuqit yanapaña';
 
   @override
-  String get home_cardComunidad => 'Marka';
+  String get home_asistencia_sub1 => '• Jan walt\'ayasiñataki';
 
   @override
-  String get home_cardMisDerechos => 'Nayax kunjamsa ajllisiñanikta';
+  String get home_asistencia_sub2 => '• ILE';
 
   @override
-  String get home_btnPolicia => 'Estacion de policia mas cercano';
+  String get home_chatBot => 'Aruskipiri';
 
   @override
-  String get home_btnTimer => 'Salvaguarda Pachanaka';
+  String get home_aprender => 'Yatiqaña';
 
   @override
-  String get asis_appBar => 'Tú guia de asistencia legal';
+  String get home_comunidad => 'Jach\'a Tama';
+
+  @override
+  String get home_policia => 'Policiataki nint\'ita';
+
+  @override
+  String get home_quieroCalma => 'Sumat amuyt\'asiñäni';
+
+  @override
+  String get card_1 => 'Janchisar jan walt\'ayäwi';
+
+  @override
+  String get card_2 => 'I.L.E (Wawa pichuyaña)';
+
+  @override
+  String get card_3 => 'Qulla utan jisk\'achäwi';
 
   @override
   String get legal_title => 'Tu guía de acción legal';
@@ -199,4 +213,131 @@ class AppLocalizationsAy extends AppLocalizations {
   @override
   String get der_rep_7_content =>
       'Bolivia markanxa, jumax derecho churatawa aborto lurayañataki ley tuqita (SC 0206/2014). Violación utjaski ukhax jan ukax janchimax llakiñankaski ukhax sum uñjatäñamawa jan pirus jisk\'achañampi.';
+
+  @override
+  String get drop_der1 => '¿Kunas lurañaxa jan walt\'äwin uñjasisna?';
+
+  @override
+  String get drop_der1_intro =>
+      '¡Janiw sapaäkstati! Jan walt\'ayasiñax jach\'a juchawa. Janïra amtkasax ak amtañamawa: Jan janchis t\'axsuñamati ukat janirakiw isinakas warkuñamati.';
+
+  @override
+  String get drop_der1_derSex => 'Denuncia lurañ munta.';
+
+  @override
+  String get drop_der1_derSex_paso1 =>
+      '1. Yanapa thaqhañama ukat denuncia lurañama';
+
+  @override
+  String get drop_der1_derSex_paso1_content =>
+      'Aka utanakaruw sarasma denuncia lurañataki:\n• FELCV.\n• Fiscalía.\n• Aylluman jach\'a jilaqatanaka.\n\nSLIM ukat Defensoría ukanakas yanapätamwa.';
+
+  @override
+  String get drop_der1_derSex_paso1_btn => 'Estación policial thaqhañataki';
+
+  @override
+  String get drop_der1_derSex_paso2 => '2. Papilama mayiñama';
+
+  @override
+  String get drop_der1_derSex_paso2_content =>
+      'Denuncia luratasax, mä copia mayiñamawa. Uka papilax juman munañamawa.';
+
+  @override
+  String get drop_der1_derSex_paso3 => '3. Qulla utar sarama';
+
+  @override
+  String get drop_der1_derSex_paso3_content =>
+      'Jilaqatanakax qulla utaruw khitapxtama janchim uñjañataki.';
+
+  @override
+  String get drop_der1_derSex_paso3_btn => 'Qulla uta thaqhañataki';
+
+  @override
+  String get drop_der1_derRep => 'Nayraqatax qulliri thaqhañ munta.';
+
+  @override
+  String get drop_der1_derRep_paso1 => '1. Qulla utar chiqak sarama';
+
+  @override
+  String get drop_der1_derRep_paso1_content =>
+      'Jan wal uñjasisna ukhax qulliri uñjañataki sarama janïr jilaqatanakampi parlasa.';
+
+  @override
+  String get drop_der1_derRep_paso1_btn => 'Qulla uta thaqhaña';
+
+  @override
+  String get drop_der1_derRep_paso2 => '2. Qullirinaka uñjatamwa';
+
+  @override
+  String get drop_der1_derRep_paso2_content =>
+      'Janchim uñjapxtani, chuymachapxtani ukat papilanak lurañataki yanapapxtani.';
+
+  @override
+  String get drop_der1_derRep_paso3 => '3. Jupanakaw denuncia lurapxani';
+
+  @override
+  String get drop_der1_derRep_paso3_content =>
+      'Qullirinakax jilaqatanakaruw yatiyapxani kunas pasatama uka tuqita.';
+
+  @override
+  String get drop_der1_infoMed_title => '¿Kunas qulla utan pasani?';
+
+  @override
+  String get drop_der1_infoMed_72h_low =>
+      'Pacha (72 h) janïr pasana:\n• Qullanaka.\n• Usunakat jark\'aqasiña.\n• Janchim uñjawi.\n• Chuymachäwi.';
+
+  @override
+  String get drop_der1_infoMed_72h_high =>
+      'Si pasaron más de 72 horas:\n• Pruebas de embarazo y VIH.\n• Muestras médico legales.\n• Tratamiento postraumático.';
+
+  @override
+  String get ile_title => 'ILE tuqit yatiñäni';
+
+  @override
+  String get ile_subtitle => 'Wawa pichuyaña ley tuqita (ILE)';
+
+  @override
+  String get ile_definition =>
+      'Jan wal uñjasna ukhax derecho churatawa uka wawa pichuyañataki. Janïra amtkasax juman munañamawa.';
+
+  @override
+  String get ile_req_title => '¿Kunas munasini?';
+
+  @override
+  String get ile_req_content =>
+      'Sentencia 0206/2014 ukarjamaxa, aka lurañataki qulla utanakanx akakiw munasini:\n• Munañama (firmañamawa).\n• Denunciaman papilapa (copia).';
+
+  @override
+  String get ile_extra_info_title => 'Ak yatiñamax askiwa:';
+
+  @override
+  String get ile_extra_info_points =>
+      '• Inaquikiwa: Janiw kunas phuqañamäkiti.\n• Jan jilaqatanakampi: Janiw juezan munañapa munasikiti.\n• Imantata: Janiw khitis yatiyañapäkiti.\n• Jakt\'ata: Janïra jaya pacha pasasna ukhax sum uñjatäñamawa.';
+
+  @override
+  String get ile_footer => 'Jumaw amtata, markax uñjiwa, Estado-x yanapiwa.';
+
+  @override
+  String get safe_calm_title => 'Sumat amuyt\'asiñäni. Janiw sapaäkstati.';
+
+  @override
+  String get safe_calm_subtitle => 'Suma samart\'ama, amuyumpi';
+
+  @override
+  String get safe_calm_btn_start => 'Samaña qalltañataki';
+
+  @override
+  String get safe_calm_steps_title => 'Sumat amuyt\'asiñataki';
+
+  @override
+  String get safe_calm_step1 => 'Qunt\'asima ukat amuyt\'asima';
+
+  @override
+  String get safe_calm_step2 => 'Uma umaskma sumataki';
+
+  @override
+  String get safe_calm_step3 => 'Samasima ukat sumat parlama';
+
+  @override
+  String get safe_calm_step4 => 'Amparanakamsa kunkamamsa sumat k\'isthapima';
 }

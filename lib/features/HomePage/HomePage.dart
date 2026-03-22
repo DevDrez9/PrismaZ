@@ -8,10 +8,15 @@ import 'package:salud_apps/core/widgets/BotonGrandePrincipal.dart';
 import 'package:salud_apps/core/widgets/CardRectangulo.dart';
 import 'package:salud_apps/core/widgets/CardIcono.dart';
 import 'package:salud_apps/core/widgets/CardPrincipal.dart';
+import 'package:salud_apps/core/widgets/CardRectanguloV.dart';
 import 'package:salud_apps/core/widgets/CardTexto.dart';
 import 'package:salud_apps/features/AsistenciaLegal/AsistenciaLegal.dart';
+import 'package:salud_apps/features/AyudaPage/AyudaPage.dart';
+import 'package:salud_apps/features/Mapas/PoliciaPage.dart';
+import 'package:salud_apps/features/SaludEducacion/MenuDerechos.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 import 'package:salud_apps/l10n/app_localizations.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatelessWidget {
   Homepage({super.key});
@@ -19,6 +24,21 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
+
+    Future<void> abrirWhatsApp() async {
+      final String urlString =
+          "https://api.whatsapp.com/send/?phone=59176789702&text=Hola+Dra.+Violeta&type=phone_number&app_absent=0";
+      final Uri url = Uri.parse(urlString);
+
+      try {
+        // Lanzamos la URL directamente sin usar canLaunchUrl
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      } catch (e) {
+        // Si falla, lo imprimimos en consola en lugar de romper la app
+        debugPrint('No se pudo abrir el enlace: $e');
+      }
+    }
 
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
@@ -27,9 +47,9 @@ class Homepage extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          l10n.home_appBarTitle,
+          "Yanapiri",
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-            color: Colors.black,
+            color: Theme.of(context).colorScheme.inverseSurface,
             fontWeight: FontWeight.bold,
             fontSize: 37,
           ),
@@ -54,25 +74,21 @@ class Homepage extends StatelessWidget {
             ],
           ),
 
-          // Botón 1
-          IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: Theme.of(context).colorScheme.primaryContainer,
-            ),
-            onPressed: () {
-              print("Notificaciones");
-            },
-          ),
           // Botón 2
           IconButton(
             icon: Icon(
-              Icons.person_2,
-              color: Theme.of(context).colorScheme.primaryContainer,
+              Icons.menu_book,
+              color: Theme.of(context).colorScheme.inverseSurface,
               size: 30,
             ),
             onPressed: () {
-              print("Configuración");
+              Navigator.of(context).push(
+                // Quitamos el "Replacement"
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Saludeducacionpage(), // Tu nueva pantalla
+                ),
+              );
             },
           ),
           const SizedBox(width: 8), // Pequeño espacio al final
@@ -84,7 +100,11 @@ class Homepage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/background.png'), // O NetworkImage
+                image: AssetImage(
+                  esTemaOscuro
+                      ? 'assets/background_dark.png' // Imagen para el modo oscuro
+                      : 'assets/background.png', // Imagen para el modo claro
+                ),
                 fit: BoxFit.cover, // Para que cubra toda la pantalla
               ),
             ),
@@ -94,20 +114,45 @@ class Homepage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Center(child: CardTexto(textoCard: l10n.home_welcomeMessage)),
+                SizedBox(height: 30),
+                Center(child: CardTexto(textoCard: "Bienvenido")),
 
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Wrap(
-                    spacing: 12.0, // Espacio horizontal entre los hijos
+                    spacing: 10.0, // Espacio horizontal entre los hijos
                     runSpacing: 16.0, // Espacio vertical entre las líneas
                     alignment:
                         WrapAlignment.start, // Alineación de los elementos
                     children: [
                       BotonGrandePrincipal(
-                        textoCard: "Asistencia Legal",
+                        textoCard: "Asistencia Legal ",
+                        subText: "Violencia sexual,ILE",
                         imagen: "assets/gavel.svg",
+                        iconColor: Theme.of(context).colorScheme.inverseSurface,
                         svgHeight: 100,
+                        onTap: () => {
+                          Navigator.of(context).push(
+                            // Quitamos el "Replacement"
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Menuderechos(), // Tu nueva pantalla
+                            ),
+                          ),
+                        },
+                      ),
+
+                      CardRectanguloV(
+                        textoCard: "Chat Bot",
+                        imagen: "assets/chat.svg",
+                        iconColor: Theme.of(context).colorScheme.primary,
+                        onTap: () => {abrirWhatsApp()},
+                      ),
+                      CardRectanguloV(
+                        textoCard: "Aprender",
+                        imagen:
+                            "assets/book_2_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
+                        iconColor: Theme.of(context).colorScheme.primary,
                         onTap: () => {
                           Navigator.of(context).push(
                             // Quitamos el "Replacement"
@@ -118,54 +163,50 @@ class Homepage extends StatelessWidget {
                           ),
                         },
                       ),
-                      Cardprincipal(
-                        textoCard: l10n.home_cardMisDerechos,
-                        imagen: "assets/heart_check.svg",
-                        iconColor: Colors.red,
-                        svgHeight: 80,
-                        onTap: () => {
-                          Navigator.of(context).push(
-                            // Quitamos el "Replacement"
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const Saludeducacionpage(), // Tu nueva pantalla
-                            ),
-                          ),
-                        },
-                      ),
-
-                      Cardprincipal(
-                        textoCard: l10n.home_cardChatBot,
-                        imagen: "assets/chat.svg",
-                        iconColor: Colors.brown,
-                        svgHeight: 80,
-                      ),
-
-                      Cardprincipal(
-                        textoCard: l10n.home_cardComunidad,
-                        imagen: "assets/chat.svg",
-                        iconColor: Color(0xff2c8f93),
-                        svgHeight: 80,
+                      CardRectanguloV(
+                        textoCard: "Comunidad",
+                        imagen: "assets/conversation.svg",
+                        iconColor: Theme.of(context).colorScheme.primary,
                       ),
                     ],
                   ),
                 ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CardRectangulo(
-                      textoCard: l10n.home_btnPolicia,
-                      imagen: "assets/chat.svg",
-                      svgHeight: 50,
+                Cardprincipal(
+                  textoCard: "Estacion de policia mas cercana",
+                  imagen:
+                      "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
+                  contenedorColor: AppTheme.colorAmariilo,
+                  opacityBlur: 1,
+                  colorTexto: Colors.red,
+                  iconColor: Colors.red,
+                  onTap: () => {
+                    Navigator.of(context).push(
+                      // Quitamos el "Replacement"
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            PoliciaPage(), // Tu nueva pantalla
+                      ),
                     ),
-                    SizedBox(width: 10),
-                    CardRectangulo(
-                      textoCard: l10n.home_btnTimer,
-                      imagen: "assets/chat.svg",
-                      svgHeight: 50,
+                  },
+                ),
+                SizedBox(height: 25),
+                Cardprincipal(
+                  textoCard: "Quiero Calmarme",
+                  imagen:
+                      "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
+                  isImageRight: true,
+                  contenedorColor: AppTheme.colorVerde,
+
+                  opacityBlur: 0.95,
+                  onTap: () => {
+                    Navigator.of(context).push(
+                      // Quitamos el "Replacement"
+                      MaterialPageRoute(
+                        builder: (context) => AyudaPage(), // Tu nueva pantalla
+                      ),
                     ),
-                  ],
+                  },
                 ),
               ],
             ),

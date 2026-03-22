@@ -22,14 +22,13 @@ class CardCuadrado extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlurContainer(
-      color: Theme.of(context).colorScheme.surfaceContainerLowest,
+      color: Theme.of(context).colorScheme.secondaryContainer,
       showShadow: true,
-      opacity: 0.8,
+      opacity: 0.5,
+
       child: Material(
         // 2. Agregamos Material para que el InkWell funcione
-        color: Theme.of(
-          context,
-        ).colorScheme.primaryContainer, // Importante que sea transparente
+        color: Colors.transparent, // Importante que sea transparente
         child: InkWell(
           onTap: onTap, // 3. Asignamos la acción
           splashColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),

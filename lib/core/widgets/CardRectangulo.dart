@@ -24,7 +24,7 @@ class CardRectangulo extends StatelessWidget {
     return BlurContainer(
       color: Theme.of(context).colorScheme.primaryContainer,
       showShadow: true,
-      opacity: 0.8,
+      opacity: 0.5,
       child: Material(
         // 2. Agregamos Material para que el InkWell funcione
         color: Theme.of(context).colorScheme.primary.withOpacity(
@@ -59,7 +59,7 @@ class CardRectangulo extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    color: Theme.of(context).colorScheme.inverseSurface,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                   ),

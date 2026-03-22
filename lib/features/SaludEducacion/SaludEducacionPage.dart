@@ -38,6 +38,8 @@ class _SaludeducacionpageState extends State<Saludeducacionpage> {
         .map((d) => d.titulo)
         .toList();
 
+    final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
       appBar: AppBar(
@@ -103,7 +105,11 @@ class _SaludeducacionpageState extends State<Saludeducacionpage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/background.png'), // O NetworkImage
+                image: AssetImage(
+                  esTemaOscuro
+                      ? 'assets/background_dark.png' // Imagen para el modo oscuro
+                      : 'assets/background.png', // Imagen para el modo claro
+                ),
                 fit: BoxFit.cover, // Para que cubra toda la pantalla
               ),
             ),

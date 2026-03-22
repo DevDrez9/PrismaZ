@@ -6,6 +6,10 @@ class AppTheme {
   static double mainSize = 315;
   static double medioSize = 155;
 
+  static Color colorVerde = Color(0xff2c8f93);
+  static Color colorAmariilo = Color(0xffffde59);
+  static Color colorPlomo = Color.fromARGB(255, 40, 0, 56);
+
   static double getMainWidth(BuildContext context) {
     return MediaQuery.of(context).size.width * 0.9; // 90% del ancho de pantalla
   }
@@ -19,6 +23,11 @@ class AppTheme {
   }
 
   static double getMainWidth30(BuildContext context) {
+    return MediaQuery.of(context).size.width *
+        0.30; // 90% del ancho de pantalla
+  }
+
+  static double getMainWidth25(BuildContext context) {
     return MediaQuery.of(context).size.width *
         0.25; // 90% del ancho de pantalla
   }

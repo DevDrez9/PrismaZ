@@ -18,7 +18,7 @@ class CardTexto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 3. Aquí resolvemos el color: Si 'color' es null, usa el del Theme.
-    final colorFinal = color ?? Theme.of(context).colorScheme.primaryContainer;
+    final colorFinal = color ?? Theme.of(context).colorScheme.surface;
 
     // 4. Envolvemos el widget principal para detectar el toque
     return GestureDetector(
@@ -37,7 +37,7 @@ class CardTexto extends StatelessWidget {
             // si por error le pasas null, a diferencia de usar '!'
             textoCard ?? '',
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              color: Theme.of(context).colorScheme.onPrimaryContainer,
+              color: Theme.of(context).colorScheme.primary,
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),

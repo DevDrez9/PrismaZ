@@ -1,40 +1,28 @@
 {
 "@@locale": "es",
-  "home_appBarTitle": "Prisma Z",
-  "@home_appBarTitle": {
-    "description": "Nombre de la aplicación en la barra superior"
-  },
-  "home_welcomeMessage": "¡Hola! Aquí te acompaño",
-  "@home_welcomeMessage": {
-    "description": "Mensaje de bienvenida en el banner superior"
-  },
-  "home_cardChatBot": "Chat Bot",
-  "@home_cardChatBot": {
-    "description": "Etiqueta del botón para el módulo de Chat Bot"
-  },
-  "home_cardComunidad": "Comunidad",
-  "@home_cardComunidad": {
-    "description": "Etiqueta del botón para el módulo de Comunidad"
-  },
+  "home_appBarTittle": "Yanapiri",
+  "@home_appBarTittle": { "description": "Nombre de la app en la barra superior" },
 
-  "home_cardMisDerechos": "Mis derechos",
-  "@home_cardMisDerechos": {
-    "description": "Etiqueta del botón para el módulo de Derechos"
-  },
-  "home_btnPolicia": "Estacion de policia mas cercano",
-  "@home_btnPolicia": {
-    "description": "Boton para ir al mapa y ver comisarias"
-  },
-  "home_btnTimer": "Ayuda",
-  "@home_btnTimer": {
-    "description": "Texto del boton de panico"
-  },
+  "home_mensajeBienvenida": "¡Hola! Aqui te acompaño",
+  "@home_mensajeBienvenida": { "description": "Banner de saludo superior" },
 
-  "asis_appBar":"Tú guia de asistencia legal",
-  "@asis_appBar":{
-    "description": "Texto del titulo del modulo"
-  },
+  "home_asistencia": "Asesoria legal",
+  "home_asistencia_sub1": "• Violencia Sexual",
+  "home_asistencia_sub2": "• ILE",
 
+  "home_chatBot": "Chat Bot",
+  "home_aprender": "Aprender",
+  "home_comunidad": "Comunidad",
+
+  "home_policia": "Estacion de Policias mas cercanos",
+  "@home_policia": { "description": "Texto del botón amarillo" },
+
+  "home_quieroCalma": "Quiero calmarme",
+  "@home_quieroCalma": { "description": "Texto del botón turquesa inferior" },
+
+  "card_1":"Violencia Sexual",
+  "card_2":"I.L.E",
+  "card_3":"Discriminacion en Salud",
 
 
 
@@ -139,10 +127,75 @@
   "der_rep_6_content": "Tienes derecho a beneficiarte de los avances de la ciencia. Esto significa tener acceso a las tecnologías y tratamientos más modernos y seguros que existan en el área de la salud reproductiva.",
 
   "der_rep_7": "Interrupción Legal del Embarazo (ILE)",
-  "der_rep_7_content": "En Bolivia, tienes derecho a acceder a un aborto seguro y legal bajo las causales permitidas por la ley y la Sentencia Constitucional 0206/2014 (como casos de violación, incesto, estupro o cuando la vida o salud de la mujer corre peligro). Es un servicio que el sistema de salud debe garantizarte con respeto y sin prejuicios."
+  "der_rep_7_content": "En Bolivia, tienes derecho a acceder a un aborto seguro y legal bajo las causales permitidas por la ley y la Sentencia Constitucional 0206/2014 (como casos de violación, incesto, estupro o cuando la vida o salud de la mujer corre peligro). Es un servicio que el sistema de salud debe garantizarte con respeto y sin prejuicios.",
 
 
-  
+  "drop_der1": "¿Qué hacer si viviste violencia sexual?",
+  "drop_der1_intro": "¡No estás sola/o! La violencia es un delito. Antes de elegir qué hacer, hay algo muy importante que debes saber: No te bañes ni botes la ropa que tenías puesta en ese momento. Sabemos que es difícil, pero esto servirá como prueba para el juicio contra tu agresor.",
+
+  "drop_der1_derSex": "Quiero denunciar primero.",
+  "drop_der1_derSex_paso1": "Paso 1: Busca ayuda y presenta tu denuncia",
+  "drop_der1_derSex_paso1_content": "Puedes acudir a cualquiera de estas instituciones para denunciar:\n• FELCV (Fuerza Especial de Lucha contra la Violencia).\n• Fiscalía o Ministerio Público.\n• Autoridades de tu comunidad (área rural).\n\nTambién puedes buscar apoyo en: SLIM, Defensorías (DNA) o SIJPLU.",
+  "drop_der1_derSex_paso1_btn": "Buscar estación policial más cercana",
+
+  "drop_der1_derSex_paso2": "Paso 2: Exige tu copia",
+  "drop_der1_derSex_paso2_content": "Una vez que hagas la denuncia, exige que te entreguen una copia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.",
+
+  "drop_der1_derSex_paso3": "Paso 3: Ve al centro de salud",
+  "drop_der1_derSex_paso3_content": "Las autoridades te derivarán a un servicio de salud para que te curen y te protejan.",
+  "drop_der1_derSex_paso3_btn": "Buscar Centro de Salud más cercano",
+
+  "drop_der1_derRep": "Necesito ir a un médico primero.",
+  "drop_der1_derRep_paso1": "Paso 1: Ve directamente a un centro de salud",
+  "drop_der1_derRep_paso1_content": "Si te sientes mal, herida o prefieres ver a un médico antes de ir a la policía, acude a cualquier establecimiento de salud.",
+  "drop_der1_derRep_paso1_btn": "Buscar Centro de Salud",
+
+  "drop_der1_derRep_paso2": "Paso 2: Recibe atención médica",
+  "drop_der1_derRep_paso2_content": "Allí curarán tus heridas, te darán apoyo psicológico y tomarán las muestras necesarias para el proceso judicial.",
+
+  "drop_der1_derRep_paso3": "Paso 3: Ellos harán la denuncia por ti",
+  "drop_der1_derRep_paso3_content": "El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.",
+
+  "drop_der1_infoMed_title": "¿Qué pasará en el centro de salud?",
+  "drop_der1_infoMed_72h_low": "Si llegas en las primeras 72 horas:\n• Pastilla de emergencia.\n• Prevención de ITS y VIH.\n• Recolección de evidencias.\n• Contención emocional.",
+  "drop_der1_infoMed_72h_high": "Si pasaron más de 72 horas:\n• Pruebas de embarazo y VIH.\n• Muestras médico legales.\n• Tratamiento postraumático.",
+
+  "ile_title": "Conoce tus derechos reproductivos ILE",
+  "ile_subtitle": "Interrupción Legal del Embarazo (ILE)",
+  "ile_definition": "Si quedas embarazada producto de una violación, estupro o incesto, tienes derecho a interrumpir el embarazo si así lo decides. Es tu cuerpo, es tu decisión.",
+
+  "ile_req_title": "¿Qué necesitas?",
+  "ile_req_content": "Según la Sentencia Constitucional 0206/2014, para acceder a este servicio en cualquier centro de salud solo necesitas:\n• Tu consentimiento (tú firmas la solicitud).\n• Una copia de la denuncia (no necesitas que el juicio haya terminado).",
+
+  "ile_extra_info_title": "Información que debes saber:",
+  "ile_extra_info_points": "• Es Gratuito: El sistema público debe cubrir todo sin costo.\n• Sin Jueces: No necesitas una orden judicial ni permiso de tus padres si eres mayor de edad (y si eres menor, prima tu interés superior).\n• Confidencial: Nadie puede revelar tu información sin tu permiso.\n• Atención Inmediata: No pueden ponerte trabas ni retrasar el procedimiento.",
+
+  "ile_footer": "Recuerda: Tú decides, la sociedad respeta, el Estado garantiza.",
+  "@ile_footer": {
+    "description": "Lema final sobre derechos reproductivos"
+  },
+
+
+  "safe_calm_title": "Manten la calma. No estás sola.",
+  "@safe_calm_title": {
+    "description": "Título principal de la pantalla de relajación"
+  },
+  "safe_calm_subtitle": "Respira profundo, hazlo con calma",
+  "@safe_calm_subtitle": {
+    "description": "Instrucción secundaria debajo del título"
+  },
+  "safe_calm_btn_start": "Iniciar respiración",
+  "@safe_calm_btn_start": {
+    "description": "Texto dentro del botón para comenzar el ejercicio"
+  },
+  "safe_calm_steps_title": "Paso a paso para calmarte",
+  "@safe_calm_steps_title": {
+    "description": "Título de la sección de consejos rápidos"
+  },
+  "safe_calm_step1": "Toma asiento y relaja los hombros",
+  "safe_calm_step2": "Bebe un poco de agua lentamente",
+  "safe_calm_step3": "Respira y habla con una voz tranquila",
+  "safe_calm_step4": "Estira suavemente tus manos y el cuello"
 
 
 }
