@@ -13,6 +13,7 @@ class Cardprincipal extends StatelessWidget {
   final Color? contenedorColor; // 1. ¡Declaramos la nueva variable!
   final VoidCallback? onTap;
   final double? opacityBlur;
+  final String? subTexto;
 
   const Cardprincipal({
     super.key,
@@ -23,6 +24,7 @@ class Cardprincipal extends StatelessWidget {
     this.iconColor,
     this.opacityBlur = 0.5,
     this.colorTexto,
+    this.subTexto,
     this.contenedorColor, // 2. La pedimos en el constructor
     this.onTap,
   });
@@ -68,19 +70,59 @@ class Cardprincipal extends StatelessWidget {
 
                 // --- TEXTO ---
                 Expanded(
-                  child: Text(
-                    textoCard ?? "",
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color:
-                          colorTexto ??
-                          Theme.of(context).colorScheme.inverseSurface,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                    ),
-                  ),
+                  child: subTexto != null
+                      ? Column(
+                          children: [
+                            Text(
+                              textoCard ?? "",
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).textTheme.bodyLarge
+                                  ?.copyWith(
+                                    color:
+                                        colorTexto ??
+                                        Theme.of(
+                                          context,
+                                        ).colorScheme.inverseSurface,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                            ),
+                            Text(
+                              subTexto ?? "",
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).textTheme.bodyLarge
+                                  ?.copyWith(
+                                    color:
+                                        colorTexto ??
+                                        Theme.of(
+                                          context,
+                                        ).colorScheme.inverseSurface,
+
+                                    fontSize: 13,
+                                  ),
+                            ),
+                          ],
+                        )
+                      : Text(
+                          textoCard ?? "",
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.bodyLarge
+                              ?.copyWith(
+                                color:
+                                    colorTexto ??
+                                    Theme.of(
+                                      context,
+                                    ).colorScheme.inverseSurface,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                        ),
                 ),
 
                 // --- SVG A LA DERECHA ---

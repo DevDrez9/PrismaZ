@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// Nombre de la app en la barra superior
   ///
   /// In es, this message translates to:
-  /// **'Yanapiri'**
+  /// **'Yanapiru'**
   String get home_appBarTittle;
 
   /// Banner de saludo superior

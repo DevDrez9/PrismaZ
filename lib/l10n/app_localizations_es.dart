@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get home_appBarTittle => 'Yanapiri';
+  String get home_appBarTittle => 'Yanapiru';
 
   @override
   String get home_mensajeBienvenida => '¡Hola! Aqui te acompaño';

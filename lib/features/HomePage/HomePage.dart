@@ -14,6 +14,7 @@ import 'package:salud_apps/features/AsistenciaLegal/AsistenciaLegal.dart';
 import 'package:salud_apps/features/AyudaPage/AyudaPage.dart';
 import 'package:salud_apps/features/BienvenidaPage/BienvenidaPage.dart';
 import 'package:salud_apps/features/Mapas/PoliciaPage.dart';
+import 'package:salud_apps/features/Protocolo72/MenuProtocolo.dart';
 import 'package:salud_apps/features/SaludEducacion/MenuDerechos.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 import 'package:salud_apps/l10n/app_localizations.dart';
@@ -142,9 +143,9 @@ class _HomepageState extends State<Homepage> {
           ),
           // Capa 2: Tu contenido real
           SafeArea(
-            child: Center(
+            child: Align(
+              alignment: Alignment.topCenter,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: 30),
 
@@ -223,13 +224,14 @@ class _HomepageState extends State<Homepage> {
                       ),
                     },
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: 10),
                   Cardprincipal(
-                    textoCard: "Quiero Calmarme2",
+                    textoCard: "Quiero Calmarme",
                     imagen:
                         "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
                     isImageRight: true,
                     contenedorColor: AppTheme.colorVerde,
+                    colorTexto: Colors.white,
 
                     opacityBlur: 0.95,
                     onTap: () => {
@@ -238,6 +240,26 @@ class _HomepageState extends State<Homepage> {
                         MaterialPageRoute(
                           builder: (context) =>
                               AyudaPage(), // Tu nueva pantalla
+                        ),
+                      ),
+                    },
+                  ),
+                  SizedBox(height: 10),
+                  Cardprincipal(
+                    textoCard: "Protocolo de 72 horas",
+                    subTexto: "(En casos de violencia sexual)",
+
+                    isImageRight: true,
+                    contenedorColor: Theme.of(context).colorScheme.error,
+                    colorTexto: Theme.of(context).colorScheme.onError,
+
+                    opacityBlur: 0.95,
+                    onTap: () => {
+                      Navigator.of(context).push(
+                        // Quitamos el "Replacement"
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              MenuProtocolo(), // Tu nueva pantalla
                         ),
                       ),
                     },

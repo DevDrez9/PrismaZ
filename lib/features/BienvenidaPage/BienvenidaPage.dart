@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 // Asegúrate de importar tu AppTheme, BlurContainer y tu función cardBienvenida
 import 'package:flutter/material.dart';
 import 'package:salud_apps/features/AyudaPage/AyudaPage.dart';
+import 'package:salud_apps/features/Protocolo72/MenuProtocolo.dart';
 // Asegúrate de tener tus importaciones de AppTheme, BlurContainer y cardBienvenida
 
 class ModalBienvenida extends StatelessWidget {
@@ -72,7 +73,15 @@ class ModalBienvenida extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     InkWell(
-                      onTap: () => {},
+                      onTap: () => {
+                        Navigator.of(context).push(
+                          // Quitamos el "Replacement"
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                MenuProtocolo(), // Tu nueva pantalla
+                          ),
+                        ),
+                      },
                       child: cardBienvenida(
                         context,
                         "Fui victima de violencia Sexual",
