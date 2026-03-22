@@ -1,6 +1,6 @@
 {
 "@@locale": "es",
-  "home_appBarTittle": "Yanapiri",
+  "home_appBarTittle": "Yanapiru",
   "@home_appBarTittle": { "description": "Nombre de la app en la barra superior" },
 
   "home_mensajeBienvenida": "¡Hola! Aqui te acompaño",
