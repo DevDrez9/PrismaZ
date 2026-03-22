@@ -225,7 +225,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   SizedBox(height: 25),
                   Cardprincipal(
-                    textoCard: "Quiero Calmarme",
+                    textoCard: "Quiero Calmarme2",
                     imagen:
                         "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
                     isImageRight: true,
