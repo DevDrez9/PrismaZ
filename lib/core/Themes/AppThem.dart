@@ -18,6 +18,11 @@ class AppTheme {
     return MediaQuery.of(context).size.width * 0.8; // 90% del ancho de pantalla
   }
 
+  static double getMainHeight80(BuildContext context) {
+    return MediaQuery.of(context).size.height *
+        0.8; // 90% del ancho de pantalla
+  }
+
   static double getMainWidth60(BuildContext context) {
     return MediaQuery.of(context).size.width * 0.6; // 90% del ancho de pantalla
   }

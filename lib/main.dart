@@ -7,6 +7,7 @@ import 'package:salud_apps/core/Themes/theme.dart';
 import 'package:salud_apps/core/Themes/util.theme.dart';
 import 'package:salud_apps/core/constants/language_notifier.dart';
 import 'package:salud_apps/core/widgets/BlurContainer.dart';
+import 'package:salud_apps/features/BienvenidaPage/BienvenidaPage.dart';
 import 'package:salud_apps/features/HomePage/HomePage.dart';
 import 'package:salud_apps/l10n/app_localizations.dart';
 

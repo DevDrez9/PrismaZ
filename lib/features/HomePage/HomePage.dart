@@ -12,14 +12,45 @@ import 'package:salud_apps/core/widgets/CardRectanguloV.dart';
 import 'package:salud_apps/core/widgets/CardTexto.dart';
 import 'package:salud_apps/features/AsistenciaLegal/AsistenciaLegal.dart';
 import 'package:salud_apps/features/AyudaPage/AyudaPage.dart';
+import 'package:salud_apps/features/BienvenidaPage/BienvenidaPage.dart';
 import 'package:salud_apps/features/Mapas/PoliciaPage.dart';
 import 'package:salud_apps/features/SaludEducacion/MenuDerechos.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 import 'package:salud_apps/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   Homepage({super.key});
+
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  @override
+  void initState() {
+    super.initState();
+
+    // ¡EL TRUCO MÁGICO!
+    // Esto le dice a Flutter: "Espera a que termine de construir la pantalla (build)
+    // y justo un milisegundo después, ¡PUM!, lanza el modal."
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      mostrarModalAutomatico();
+    });
+  }
+
+  void mostrarModalAutomatico() {
+    showDialog(
+      context: context,
+      // barrierDismissible en 'false' obliga al usuario a tocar una de las opciones
+      // y no le permite cerrar el modal tocando fuera de él.
+      // Cámbialo a 'true' si quieres que se cierre al tocar el fondo oscuro.
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return const ModalBienvenida();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,104 +142,108 @@ class Homepage extends StatelessWidget {
           ),
           // Capa 2: Tu contenido real
           SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(height: 30),
-                Center(child: CardTexto(textoCard: "Bienvenido")),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 30),
 
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Wrap(
-                    spacing: 10.0, // Espacio horizontal entre los hijos
-                    runSpacing: 16.0, // Espacio vertical entre las líneas
-                    alignment:
-                        WrapAlignment.start, // Alineación de los elementos
-                    children: [
-                      BotonGrandePrincipal(
-                        textoCard: "Asistencia Legal ",
-                        subText: "Violencia sexual,ILE",
-                        imagen: "assets/gavel.svg",
-                        iconColor: Theme.of(context).colorScheme.inverseSurface,
-                        svgHeight: 100,
-                        onTap: () => {
-                          Navigator.of(context).push(
-                            // Quitamos el "Replacement"
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  Menuderechos(), // Tu nueva pantalla
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Wrap(
+                      spacing: 10.0, // Espacio horizontal entre los hijos
+                      runSpacing: 16.0, // Espacio vertical entre las líneas
+                      alignment:
+                          WrapAlignment.start, // Alineación de los elementos
+                      children: [
+                        BotonGrandePrincipal(
+                          textoCard: "Asistencia Legal ",
+                          subText: "Violencia sexual,ILE",
+                          imagen: "assets/gavel.svg",
+                          iconColor: Theme.of(
+                            context,
+                          ).colorScheme.inverseSurface,
+                          svgHeight: 100,
+                          onTap: () => {
+                            Navigator.of(context).push(
+                              // Quitamos el "Replacement"
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    Menuderechos(), // Tu nueva pantalla
+                              ),
                             ),
-                          ),
-                        },
-                      ),
+                          },
+                        ),
 
-                      CardRectanguloV(
-                        textoCard: "Chat Bot",
-                        imagen: "assets/chat.svg",
-                        iconColor: Theme.of(context).colorScheme.primary,
-                        onTap: () => {abrirWhatsApp()},
-                      ),
-                      CardRectanguloV(
-                        textoCard: "Aprender",
-                        imagen:
-                            "assets/book_2_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
-                        iconColor: Theme.of(context).colorScheme.primary,
-                        onTap: () => {
-                          Navigator.of(context).push(
-                            // Quitamos el "Replacement"
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  AsistenciaLegalPage(), // Tu nueva pantalla
+                        CardRectanguloV(
+                          textoCard: "Chat Bot",
+                          imagen: "assets/chat.svg",
+                          iconColor: Theme.of(context).colorScheme.primary,
+                          onTap: () => {abrirWhatsApp()},
+                        ),
+                        CardRectanguloV(
+                          textoCard: "Aprender",
+                          imagen:
+                              "assets/book_2_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
+                          iconColor: Theme.of(context).colorScheme.primary,
+                          onTap: () => {
+                            Navigator.of(context).push(
+                              // Quitamos el "Replacement"
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AsistenciaLegalPage(), // Tu nueva pantalla
+                              ),
                             ),
-                          ),
-                        },
-                      ),
-                      CardRectanguloV(
-                        textoCard: "Comunidad",
-                        imagen: "assets/conversation.svg",
-                        iconColor: Theme.of(context).colorScheme.primary,
-                      ),
-                    ],
+                          },
+                        ),
+                        CardRectanguloV(
+                          textoCard: "Comunidad",
+                          imagen: "assets/conversation.svg",
+                          iconColor: Theme.of(context).colorScheme.primary,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
 
-                Cardprincipal(
-                  textoCard: "Estacion de policia mas cercana",
-                  imagen:
-                      "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
-                  contenedorColor: AppTheme.colorAmariilo,
-                  opacityBlur: 1,
-                  colorTexto: Colors.red,
-                  iconColor: Colors.red,
-                  onTap: () => {
-                    Navigator.of(context).push(
-                      // Quitamos el "Replacement"
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            PoliciaPage(), // Tu nueva pantalla
+                  Cardprincipal(
+                    textoCard: "Estacion de policia mas cercana",
+                    imagen:
+                        "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
+                    contenedorColor: AppTheme.colorAmariilo,
+                    opacityBlur: 1,
+                    colorTexto: Colors.red,
+                    iconColor: Colors.red,
+                    onTap: () => {
+                      Navigator.of(context).push(
+                        // Quitamos el "Replacement"
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              PoliciaPage(), // Tu nueva pantalla
+                        ),
                       ),
-                    ),
-                  },
-                ),
-                SizedBox(height: 25),
-                Cardprincipal(
-                  textoCard: "Quiero Calmarme",
-                  imagen:
-                      "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
-                  isImageRight: true,
-                  contenedorColor: AppTheme.colorVerde,
+                    },
+                  ),
+                  SizedBox(height: 25),
+                  Cardprincipal(
+                    textoCard: "Quiero Calmarme",
+                    imagen:
+                        "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
+                    isImageRight: true,
+                    contenedorColor: AppTheme.colorVerde,
 
-                  opacityBlur: 0.95,
-                  onTap: () => {
-                    Navigator.of(context).push(
-                      // Quitamos el "Replacement"
-                      MaterialPageRoute(
-                        builder: (context) => AyudaPage(), // Tu nueva pantalla
+                    opacityBlur: 0.95,
+                    onTap: () => {
+                      Navigator.of(context).push(
+                        // Quitamos el "Replacement"
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AyudaPage(), // Tu nueva pantalla
+                        ),
                       ),
-                    ),
-                  },
-                ),
-              ],
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ],
