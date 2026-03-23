@@ -64,6 +64,162 @@ class AppLocalizationsAy extends AppLocalizations {
   String get modal_btn3_desc => '(Ley tuqit yanapa)';
 
   @override
+  String get protocol_title => '72 pacha thakhi';
+
+  @override
+  String get protocol_subtitle =>
+      'Akanpxtwa juman yanapañataki.\nTaqi thakhinakax juman munañamawa, sum jakañamatakisa ukat justicia jikxatañamatakis yanapaskäma.';
+
+  @override
+  String get procotol_car1 => '72 pacha janïr pasana';
+
+  @override
+  String get protocol_card2 => '72 pacha pasatxaruxa';
+
+  @override
+  String get protocol_btnContacotsEmmergencia => 'Yanapa jakt\'äwinaka';
+
+  @override
+  String get emergencia_titulo => 'Yanapa jakt\'äwinaka';
+
+  @override
+  String get emergencia_subtitulo =>
+      'Jan wal uñjasisna ukhax aka jakt\'äwinakar jawst\'ama. Juman jakañamax wali askiwa.';
+
+  @override
+  String get emergecia_card1 => 'Polician yanapapa';
+
+  @override
+  String get emergencia_card1_desc =>
+      '911 jakt\'äwir jawst\'ama yanapa katuñataki.';
+
+  @override
+  String get emergencia_card2 => 'Warminakar yanapañataki';
+
+  @override
+  String get emergencia_card2_desc => '800-10-1111 jakt\'äwir jawst\'ama.';
+
+  @override
+  String get emergencia_card3 => 'Janchis uñt\'ayasiñataki';
+
+  @override
+  String get emergencia_card3_desc =>
+      '800-10-8004 jakt\'äwir jawst\'ama yanapa katuñataki.';
+
+  @override
+  String get antes_de_72h => '72 pacha janïr pasana';
+
+  @override
+  String get antes_de_72h_fase1 => '1 T\'aqa: Chiqak lurañataki';
+
+  @override
+  String get antes_de_72h_adv => 'Uñacht\'ayäwi imaña (Wali askiwa)';
+
+  @override
+  String get antes_de_72h_card1 => 'JAN janchis t\'axsuñamati';
+
+  @override
+  String get antes_de_72h_card2 =>
+      'JAN lakanak t\'axsuñamati, jan sillunak khariñamati';
+
+  @override
+  String get antes_de_72h_card3 => 'JAN isinaka mayjt\'ayñamati';
+
+  @override
+  String get antes_de_72h_card3_desc => '(Mä bolsar imatäñapawa)';
+
+  @override
+  String get antes_de_72h_card4 =>
+      'JAN kunas t\'unjañamati jan walt\'at pachana';
+
+  @override
+  String get antes_de_72h_fase2 => '2 T\'aqa: Kawksar sarasmäxa';
+
+  @override
+  String get antes_de_72h_fase2_card1 => 'Qulla uta';
+
+  @override
+  String get antes_de_72h_fase2_card1_prioridad => 'Nayrïri';
+
+  @override
+  String get antes_de_72h_fase2_card1_desc =>
+      'Kit PPE (Profilaxis) mayiñama usunakat jark\'aqasiñataki. Janiw denuncia munasikiti.';
+
+  @override
+  String get antes_de_72h_fase2_card1_btn => 'Jichhak sarama';
+
+  @override
+  String get antes_de_72h_fase3 => 'Jupanakaw denuncia lurapxani';
+
+  @override
+  String get antes_de_72h_fase3_desc =>
+      'Qullirinakax jilaqatanakaruw yatiyapxani kunas pasatama uka tuqita.';
+
+  @override
+  String get despues72h => '72 pacha pasatxaruxa';
+
+  @override
+  String get despues72h_desc =>
+      '72 pacha pasatxaruxa, janchim sum uñjasiñama ukhamarak munañamarjam amtañamawa.';
+
+  @override
+  String get despues72h_tit1 => 'Taqpacha qulla uñjawi';
+
+  @override
+  String get despues72h_tit1_card1_tit => 'Yant\'äwinaka';
+
+  @override
+  String get despues72h_tit1_card1_desc =>
+      'VIH, Hepatitis ukat yaqha usunaka uñjañataki.';
+
+  @override
+  String get despues72h_tit1_card2_tit => 'Janchim uñjawi';
+
+  @override
+  String get despues72h_tit1_card2_desc => 'Janchiman usunaka qullatäñapawa.';
+
+  @override
+  String get despues72h_card_apoyo => 'Derechos Reproductivos I.L.E';
+
+  @override
+  String get despues72h_card_apoyo_link =>
+      'Derecho churatawa wawa pichuyañataki (ILE).';
+
+  @override
+  String get despues72h_subCard_tit => 'Jan walt\'ayasiñ utjki ukhaxa';
+
+  @override
+  String get despues72h_subCard_desc => '• Janiw juezan munañapa munasikiti \n';
+
+  @override
+  String get despues72h_subCard_desc2 =>
+      '• Denunciaman papilapakiw munasini \n';
+
+  @override
+  String get despues72h_tit2 => 'Denuncia luraña';
+
+  @override
+  String get despues72h_tit2_desc =>
+      'Aka utanakaruw sarasma:\n  • FELCV.\n  • Fiscalía.\n  • Aylluman jilaqatanaka.\n SLIM ukat Defensoría ukanakas yanapätamwa.';
+
+  @override
+  String get despues72h_tit2_btn => 'FELCV';
+
+  @override
+  String get despues72h_tit3 => 'Papilama mayiñama';
+
+  @override
+  String get despues72h_tit3_desc =>
+      'Denuncia luratasax, mä copia mayiñamawa. Uka papilax juman munañamawa.';
+
+  @override
+  String get despues72h_subCard2 => 'Chuymachäwi';
+
+  @override
+  String get despues72h_subCard2_desc =>
+      'Llakisiñax jutaspawa. Janiw sapaäkstati. Yanapa thaqhañamawa.';
+
+  @override
   String get card_1 => 'Janchisar jan walt\'ayäwi';
 
   @override

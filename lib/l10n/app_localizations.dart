@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// Nombre de la app en la barra superior
   ///
   /// In es, this message translates to:
-  /// **'Yanapiru'**
+  /// **'Yanapiri'**
   String get home_appBarTittle;
 
   /// No description provided for @home_asistencia.
@@ -205,6 +205,288 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'(Asistencia Legal)'**
   String get modal_btn3_desc;
+
+  /// No description provided for @protocol_title.
+  ///
+  /// In es, this message translates to:
+  /// **'Protocolo de 72 horas'**
+  String get protocol_title;
+
+  /// No description provided for @protocol_subtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Estamos aqui para acompañarte.\nCada paso que tomes es valioso y estamos para guiarte a tu bienestar y obtener justicia.'**
+  String get protocol_subtitle;
+
+  /// No description provided for @procotol_car1.
+  ///
+  /// In es, this message translates to:
+  /// **'Antes de 72 horas'**
+  String get procotol_car1;
+
+  /// No description provided for @protocol_card2.
+  ///
+  /// In es, this message translates to:
+  /// **'Después de 72 horas'**
+  String get protocol_card2;
+
+  /// No description provided for @protocol_btnContacotsEmmergencia.
+  ///
+  /// In es, this message translates to:
+  /// **'Contactos de emergencia'**
+  String get protocol_btnContacotsEmmergencia;
+
+  /// No description provided for @emergencia_titulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Contactos de emergencia'**
+  String get emergencia_titulo;
+
+  /// No description provided for @emergencia_subtitulo.
+  ///
+  /// In es, this message translates to:
+  /// **'Si te encuentras en una situación de riesgo, comunícate inmediatamente con estas instituciones. Tu seguridad es lo más importante.'**
+  String get emergencia_subtitulo;
+
+  /// No description provided for @emergecia_card1.
+  ///
+  /// In es, this message translates to:
+  /// **'Emergencias Policiales'**
+  String get emergecia_card1;
+
+  /// No description provided for @emergencia_card1_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Llama al 911 para asistencia inmediata.'**
+  String get emergencia_card1_desc;
+
+  /// No description provided for @emergencia_card2.
+  ///
+  /// In es, this message translates to:
+  /// **'Línea de Violencia contra la Mujer'**
+  String get emergencia_card2;
+
+  /// No description provided for @emergencia_card2_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Llama al 800-10-1111 para apoyo especializado.'**
+  String get emergencia_card2_desc;
+
+  /// No description provided for @emergencia_card3.
+  ///
+  /// In es, this message translates to:
+  /// **'Línea de Salud Sexual'**
+  String get emergencia_card3;
+
+  /// No description provided for @emergencia_card3_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Llama al 800-10-8004 para información y asesoría sobre salud sexual.'**
+  String get emergencia_card3_desc;
+
+  /// No description provided for @antes_de_72h.
+  ///
+  /// In es, this message translates to:
+  /// **'Antes de 72 horas'**
+  String get antes_de_72h;
+
+  /// No description provided for @antes_de_72h_fase1.
+  ///
+  /// In es, this message translates to:
+  /// **'Fase 1: Accion Inmediata'**
+  String get antes_de_72h_fase1;
+
+  /// No description provided for @antes_de_72h_adv.
+  ///
+  /// In es, this message translates to:
+  /// **'Preservacion de Evidencia (Vital)'**
+  String get antes_de_72h_adv;
+
+  /// No description provided for @antes_de_72h_card1.
+  ///
+  /// In es, this message translates to:
+  /// **'NO te bañes'**
+  String get antes_de_72h_card1;
+
+  /// No description provided for @antes_de_72h_card2.
+  ///
+  /// In es, this message translates to:
+  /// **'NO lavarse los dientes no cortarse las uñas'**
+  String get antes_de_72h_card2;
+
+  /// No description provided for @antes_de_72h_card3.
+  ///
+  /// In es, this message translates to:
+  /// **'NO cambies tu ropa'**
+  String get antes_de_72h_card3;
+
+  /// No description provided for @antes_de_72h_card3_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'(Si es posible, guárdala en una bolsa)'**
+  String get antes_de_72h_card3_desc;
+
+  /// No description provided for @antes_de_72h_card4.
+  ///
+  /// In es, this message translates to:
+  /// **'NO limpiar la escena del delito'**
+  String get antes_de_72h_card4;
+
+  /// No description provided for @antes_de_72h_fase2.
+  ///
+  /// In es, this message translates to:
+  /// **'Fase 2: A donde ir'**
+  String get antes_de_72h_fase2;
+
+  /// No description provided for @antes_de_72h_fase2_card1.
+  ///
+  /// In es, this message translates to:
+  /// **'Centro de Salud'**
+  String get antes_de_72h_fase2_card1;
+
+  /// No description provided for @antes_de_72h_fase2_card1_prioridad.
+  ///
+  /// In es, this message translates to:
+  /// **'Prioridad'**
+  String get antes_de_72h_fase2_card1_prioridad;
+
+  /// No description provided for @antes_de_72h_fase2_card1_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Solicita el Kit PPE (Profilaxis Post-Exposición) para prevenir infecciones y embarazo. No requiere denuncia previa.'**
+  String get antes_de_72h_fase2_card1_desc;
+
+  /// No description provided for @antes_de_72h_fase2_card1_btn.
+  ///
+  /// In es, this message translates to:
+  /// **'Ir ahora'**
+  String get antes_de_72h_fase2_card1_btn;
+
+  /// No description provided for @antes_de_72h_fase3.
+  ///
+  /// In es, this message translates to:
+  /// **'Ellos haran la denuncia por ti'**
+  String get antes_de_72h_fase3;
+
+  /// No description provided for @antes_de_72h_fase3_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.'**
+  String get antes_de_72h_fase3_desc;
+
+  /// No description provided for @despues72h.
+  ///
+  /// In es, this message translates to:
+  /// **'Después de 72 horas'**
+  String get despues72h;
+
+  /// No description provided for @despues72h_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Pasadas las 72 horas, el enfoque se desplaza hacia tu recuperación integral y el ejercicio de tu autonomía.'**
+  String get despues72h_desc;
+
+  /// No description provided for @despues72h_tit1.
+  ///
+  /// In es, this message translates to:
+  /// **'Atención Médica Integral'**
+  String get despues72h_tit1;
+
+  /// No description provided for @despues72h_tit1_card1_tit.
+  ///
+  /// In es, this message translates to:
+  /// **'Pruebas Diagnosticas'**
+  String get despues72h_tit1_card1_tit;
+
+  /// No description provided for @despues72h_tit1_card1_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Seguimiento de VIH, Hepatitis y otras ITS. Es vital completar los ciclos de análisis recomendados.'**
+  String get despues72h_tit1_card1_desc;
+
+  /// No description provided for @despues72h_tit1_card2_tit.
+  ///
+  /// In es, this message translates to:
+  /// **'Tratamiento de lesiones'**
+  String get despues72h_tit1_card2_tit;
+
+  /// No description provided for @despues72h_tit1_card2_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuidado de secuelas físicas y derivación a especialistas si es necesario.'**
+  String get despues72h_tit1_card2_desc;
+
+  /// No description provided for @despues72h_card_apoyo.
+  ///
+  /// In es, this message translates to:
+  /// **'Derechos Reproductivos I.L.E'**
+  String get despues72h_card_apoyo;
+
+  /// No description provided for @despues72h_card_apoyo_link.
+  ///
+  /// In es, this message translates to:
+  /// **'Tienes derecho a la interrupción legal del embarazo (ILE).'**
+  String get despues72h_card_apoyo_link;
+
+  /// No description provided for @despues72h_subCard_tit.
+  ///
+  /// In es, this message translates to:
+  /// **'En caso de Violencia Sexual'**
+  String get despues72h_subCard_tit;
+
+  /// No description provided for @despues72h_subCard_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'• No se requiere orden Judicial \n'**
+  String get despues72h_subCard_desc;
+
+  /// No description provided for @despues72h_subCard_desc2.
+  ///
+  /// In es, this message translates to:
+  /// **'• Solo es necesaria la copia de la Denuncia Policial \n'**
+  String get despues72h_subCard_desc2;
+
+  /// No description provided for @despues72h_tit2.
+  ///
+  /// In es, this message translates to:
+  /// **'Proceso Legal y Denuncia'**
+  String get despues72h_tit2;
+
+  /// No description provided for @despues72h_tit2_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes acudir a cualquiera de estas instituciones para denunciar:\n  • FELCV.\n  • Fiscalía o Ministerio Público.\n  • Autoridades de tu comunidad.\n También puedes buscar apoyo en:\n  • SLIM, Defensorías (DNA) o SIJPLU.'**
+  String get despues72h_tit2_desc;
+
+  /// No description provided for @despues72h_tit2_btn.
+  ///
+  /// In es, this message translates to:
+  /// **'FELCV'**
+  String get despues72h_tit2_btn;
+
+  /// No description provided for @despues72h_tit3.
+  ///
+  /// In es, this message translates to:
+  /// **'Exige tu copia'**
+  String get despues72h_tit3;
+
+  /// No description provided for @despues72h_tit3_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'Una vez que hagas la denuncia, exige que te entreguen una copia de la denuncia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.'**
+  String get despues72h_tit3_desc;
+
+  /// No description provided for @despues72h_subCard2.
+  ///
+  /// In es, this message translates to:
+  /// **'Ayuda Psicologica'**
+  String get despues72h_subCard2;
+
+  /// No description provided for @despues72h_subCard2_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'El impacto emocional puede aparecer días después. No estás sola. Busca apoyo en redes de contención especializada.'**
+  String get despues72h_subCard2_desc;
 
   /// No description provided for @card_1.
   ///

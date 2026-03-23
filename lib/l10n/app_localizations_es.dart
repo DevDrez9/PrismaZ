@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get home_appBarTittle => 'Yanapiru';
+  String get home_appBarTittle => 'Yanapiri';
 
   @override
   String get home_asistencia => 'Asesoria legal';
@@ -62,6 +62,163 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get modal_btn3_desc => '(Asistencia Legal)';
+
+  @override
+  String get protocol_title => 'Protocolo de 72 horas';
+
+  @override
+  String get protocol_subtitle =>
+      'Estamos aqui para acompañarte.\nCada paso que tomes es valioso y estamos para guiarte a tu bienestar y obtener justicia.';
+
+  @override
+  String get procotol_car1 => 'Antes de 72 horas';
+
+  @override
+  String get protocol_card2 => 'Después de 72 horas';
+
+  @override
+  String get protocol_btnContacotsEmmergencia => 'Contactos de emergencia';
+
+  @override
+  String get emergencia_titulo => 'Contactos de emergencia';
+
+  @override
+  String get emergencia_subtitulo =>
+      'Si te encuentras en una situación de riesgo, comunícate inmediatamente con estas instituciones. Tu seguridad es lo más importante.';
+
+  @override
+  String get emergecia_card1 => 'Emergencias Policiales';
+
+  @override
+  String get emergencia_card1_desc => 'Llama al 911 para asistencia inmediata.';
+
+  @override
+  String get emergencia_card2 => 'Línea de Violencia contra la Mujer';
+
+  @override
+  String get emergencia_card2_desc =>
+      'Llama al 800-10-1111 para apoyo especializado.';
+
+  @override
+  String get emergencia_card3 => 'Línea de Salud Sexual';
+
+  @override
+  String get emergencia_card3_desc =>
+      'Llama al 800-10-8004 para información y asesoría sobre salud sexual.';
+
+  @override
+  String get antes_de_72h => 'Antes de 72 horas';
+
+  @override
+  String get antes_de_72h_fase1 => 'Fase 1: Accion Inmediata';
+
+  @override
+  String get antes_de_72h_adv => 'Preservacion de Evidencia (Vital)';
+
+  @override
+  String get antes_de_72h_card1 => 'NO te bañes';
+
+  @override
+  String get antes_de_72h_card2 =>
+      'NO lavarse los dientes no cortarse las uñas';
+
+  @override
+  String get antes_de_72h_card3 => 'NO cambies tu ropa';
+
+  @override
+  String get antes_de_72h_card3_desc =>
+      '(Si es posible, guárdala en una bolsa)';
+
+  @override
+  String get antes_de_72h_card4 => 'NO limpiar la escena del delito';
+
+  @override
+  String get antes_de_72h_fase2 => 'Fase 2: A donde ir';
+
+  @override
+  String get antes_de_72h_fase2_card1 => 'Centro de Salud';
+
+  @override
+  String get antes_de_72h_fase2_card1_prioridad => 'Prioridad';
+
+  @override
+  String get antes_de_72h_fase2_card1_desc =>
+      'Solicita el Kit PPE (Profilaxis Post-Exposición) para prevenir infecciones y embarazo. No requiere denuncia previa.';
+
+  @override
+  String get antes_de_72h_fase2_card1_btn => 'Ir ahora';
+
+  @override
+  String get antes_de_72h_fase3 => 'Ellos haran la denuncia por ti';
+
+  @override
+  String get antes_de_72h_fase3_desc =>
+      'El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.';
+
+  @override
+  String get despues72h => 'Después de 72 horas';
+
+  @override
+  String get despues72h_desc =>
+      'Pasadas las 72 horas, el enfoque se desplaza hacia tu recuperación integral y el ejercicio de tu autonomía.';
+
+  @override
+  String get despues72h_tit1 => 'Atención Médica Integral';
+
+  @override
+  String get despues72h_tit1_card1_tit => 'Pruebas Diagnosticas';
+
+  @override
+  String get despues72h_tit1_card1_desc =>
+      'Seguimiento de VIH, Hepatitis y otras ITS. Es vital completar los ciclos de análisis recomendados.';
+
+  @override
+  String get despues72h_tit1_card2_tit => 'Tratamiento de lesiones';
+
+  @override
+  String get despues72h_tit1_card2_desc =>
+      'Cuidado de secuelas físicas y derivación a especialistas si es necesario.';
+
+  @override
+  String get despues72h_card_apoyo => 'Derechos Reproductivos I.L.E';
+
+  @override
+  String get despues72h_card_apoyo_link =>
+      'Tienes derecho a la interrupción legal del embarazo (ILE).';
+
+  @override
+  String get despues72h_subCard_tit => 'En caso de Violencia Sexual';
+
+  @override
+  String get despues72h_subCard_desc => '• No se requiere orden Judicial \n';
+
+  @override
+  String get despues72h_subCard_desc2 =>
+      '• Solo es necesaria la copia de la Denuncia Policial \n';
+
+  @override
+  String get despues72h_tit2 => 'Proceso Legal y Denuncia';
+
+  @override
+  String get despues72h_tit2_desc =>
+      'Puedes acudir a cualquiera de estas instituciones para denunciar:\n  • FELCV.\n  • Fiscalía o Ministerio Público.\n  • Autoridades de tu comunidad.\n También puedes buscar apoyo en:\n  • SLIM, Defensorías (DNA) o SIJPLU.';
+
+  @override
+  String get despues72h_tit2_btn => 'FELCV';
+
+  @override
+  String get despues72h_tit3 => 'Exige tu copia';
+
+  @override
+  String get despues72h_tit3_desc =>
+      'Una vez que hagas la denuncia, exige que te entreguen una copia de la denuncia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.';
+
+  @override
+  String get despues72h_subCard2 => 'Ayuda Psicologica';
+
+  @override
+  String get despues72h_subCard2_desc =>
+      'El impacto emocional puede aparecer días después. No estás sola. Busca apoyo en redes de contención especializada.';
 
   @override
   String get card_1 => 'Violencia Sexual';

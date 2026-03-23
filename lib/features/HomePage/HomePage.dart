@@ -79,7 +79,7 @@ class _HomepageState extends State<Homepage> {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Yanapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Theme.of(context).colorScheme.inverseSurface,
             fontWeight: FontWeight.bold,
@@ -158,9 +158,9 @@ class _HomepageState extends State<Homepage> {
                           WrapAlignment.start, // Alineación de los elementos
                       children: [
                         BotonGrandePrincipal(
-                          textoCard: "Asistencia Legal ",
-                          subText: "Violencia sexual,ILE",
-                          imagen: "assets/gavel.svg",
+                          textoCard: l10n.home_asistencia,
+                          subText: l10n.home_asistencia_sub1,
+                          imagen: l10n.home_asistencia_sub2,
 
                           iconColor: Theme.of(
                             context,
@@ -178,13 +178,13 @@ class _HomepageState extends State<Homepage> {
                         ),
 
                         CardRectanguloV(
-                          textoCard: "Chat Bot",
+                          textoCard: l10n.home_chatBot,
                           imagen: "assets/draVioleta.png",
                           iconColor: Theme.of(context).colorScheme.primary,
                           onTap: () => {abrirWhatsApp()},
                         ),
                         CardRectanguloV(
-                          textoCard: "Aprender",
+                          textoCard: l10n.home_aprender,
                           imagen:
                               "assets/book_2_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                           iconColor: Theme.of(context).colorScheme.primary,
@@ -199,7 +199,7 @@ class _HomepageState extends State<Homepage> {
                           },
                         ),
                         CardRectanguloV(
-                          textoCard: "Comunidad",
+                          textoCard: l10n.home_comunidad,
                           imagen: "assets/conversation.svg",
                           iconColor: Theme.of(context).colorScheme.primary,
                         ),
@@ -208,7 +208,7 @@ class _HomepageState extends State<Homepage> {
                   ),
 
                   Cardprincipal(
-                    textoCard: "Estacion de policia mas cercana",
+                    textoCard: l10n.home_policia,
                     imagen:
                         "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                     contenedorColor: AppTheme.colorAmariilo,
@@ -227,7 +227,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   SizedBox(height: 10),
                   Cardprincipal(
-                    textoCard: "Quiero Calmarme",
+                    textoCard: l10n.home_quieroCalma,
                     imagen:
                         "assets/stress_management_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
                     isImageRight: true,
@@ -247,7 +247,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   SizedBox(height: 10),
                   Cardprincipal(
-                    textoCard: "Protocolo de 72 horas",
+                    textoCard: l10n.home_btProtocolo,
                     subTexto: "(En casos de violencia sexual)",
 
                     isImageRight: true,

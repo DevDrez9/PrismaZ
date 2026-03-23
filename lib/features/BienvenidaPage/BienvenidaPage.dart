@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:salud_apps/features/AyudaPage/AyudaPage.dart';
 import 'package:salud_apps/features/Protocolo72/MenuProtocolo.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 // Asegúrate de tener tus importaciones de AppTheme, BlurContainer y cardBienvenida
 
 class ModalBienvenida extends StatelessWidget {
@@ -17,6 +18,7 @@ class ModalBienvenida extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Dialog(
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -38,7 +40,7 @@ class ModalBienvenida extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Estamos aqui para ti \n¿Que necesitas ahora?",
+                        l10n.modaa_title,
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.headlineMedium
                             ?.copyWith(
