@@ -7,8 +7,8 @@
   "home_asistencia_sub1": "• Violencia Sexual",
   "home_asistencia_sub2": "• ILE",
 
-  "home_chatBot": "Chat Bot",
-  "home_aprender": "Aprender",
+  "home_chatBot": "Dra. Violeta",
+  "home_aprender": "Guia legal",
   "home_comunidad": "Comunidad",
 
   "home_policia": "Estacion de Policias mas cercanos",
@@ -20,7 +20,7 @@
   "home_btProtocolo":"Protocolo de 72 horas",
   "home_btProtocolo_desc":"(En casos de violencia Sexual)",
 
-  "modaa_title": "Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?",
+  "modal_title": "Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?",
   "modal_btn1": "Quiero calmarme",
   "modal_btn1_desc": "(Contención emocional)",
   "modal_btn2": "Fui Victima de violencia sexual",
@@ -86,7 +86,7 @@
 
   "card_1":"Violencia Sexual",
   "card_2":"I.L.E",
-  "card_3":"Discriminacion en Salud",
+  "card_3":"Mas a futuro...",
 
 
 
