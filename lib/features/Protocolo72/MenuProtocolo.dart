@@ -203,6 +203,7 @@ Widget cardGrandeTexto(String texto, context, {VoidCallback? onTap}) {
             textAlign: TextAlign.center,
             style: AppTextStyles.textBig.copyWith(
               color: Theme.of(context).colorScheme.primary,
+              fontSize: 35,
             ),
           ),
         ),

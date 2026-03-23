@@ -8,49 +8,61 @@ class CardRectanguloV extends StatelessWidget {
   final String imagen;
   final double? svgHeight;
   final Color? iconColor;
-  final VoidCallback? onTap; // 1. Agregamos el callback de acción
+  final VoidCallback? onTap;
 
   const CardRectanguloV({
     super.key,
     required this.textoCard,
     required this.imagen,
-    this.svgHeight = 100.0,
+    this.svgHeight = 90.0,
     this.iconColor,
-    this.onTap, // Parámetro opcional
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
+    // 1. ¡LA MAGIA! Detectamos si la ruta termina en .svg (ignorando mayúsculas/minúsculas)
+    final bool esSvg = imagen.toLowerCase().endsWith('.svg');
+
     return BlurContainer(
       color: Theme.of(context).colorScheme.surface,
       showShadow: true,
       opacity: 0.5,
       child: Material(
-        // 2. Agregamos Material para que el InkWell funcione
-        color: Colors.transparent, // Importante que sea transparente
+        color: Colors.transparent,
         child: InkWell(
-          onTap: onTap, // 3. Asignamos la acción
+          onTap: onTap,
           splashColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
           highlightColor: Colors.transparent,
           child: Container(
             width: AppTheme.getMainWidth25(context),
-            height: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.width * 0.4,
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-
               children: [
+                // 2. Renderizado Condicional
                 SizedBox(
                   height: svgHeight,
-                  child: SvgPicture.asset(
-                    imagen,
-                    fit: BoxFit.contain,
-                    colorFilter: iconColor != null
-                        ? ColorFilter.mode(iconColor!, BlendMode.srcIn)
-                        : null,
-                  ),
+                  child: esSvg
+                      ? SvgPicture.asset(
+                          imagen, // Si es SVG, usa SvgPicture
+                          fit: BoxFit.contain,
+                          colorFilter: iconColor != null
+                              ? ColorFilter.mode(iconColor!, BlendMode.srcIn)
+                              : null,
+                        )
+                      : Image.asset(
+                          imagen, // Si es PNG, JPG, JPEG, etc., usa Image nativo
+                          fit: BoxFit.contain,
+                          // Aplica el color a PNGs transparentes
+                        ),
                 ),
-                const SizedBox(width: 15),
+
+                const SizedBox(
+                  height: 15,
+                ), // Corrección: de width a height por estar en Column
+
                 Text(
                   textoCard ?? "",
                   textAlign: TextAlign.center,
@@ -59,7 +71,7 @@ class CardRectanguloV extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Theme.of(context).colorScheme.inverseSurface,
                     fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    fontSize: 13,
                   ),
                 ),
               ],

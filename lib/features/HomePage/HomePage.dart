@@ -161,6 +161,7 @@ class _HomepageState extends State<Homepage> {
                           textoCard: "Asistencia Legal ",
                           subText: "Violencia sexual,ILE",
                           imagen: "assets/gavel.svg",
+
                           iconColor: Theme.of(
                             context,
                           ).colorScheme.inverseSurface,
@@ -178,7 +179,7 @@ class _HomepageState extends State<Homepage> {
 
                         CardRectanguloV(
                           textoCard: "Chat Bot",
-                          imagen: "assets/chat.svg",
+                          imagen: "assets/draVioleta.png",
                           iconColor: Theme.of(context).colorScheme.primary,
                           onTap: () => {abrirWhatsApp()},
                         ),

@@ -7,20 +7,31 @@ import 'package:salud_apps/core/widgets/BotonGrande.dart';
 import 'package:salud_apps/core/widgets/BreathingExerciseWidget.dart';
 import 'package:salud_apps/core/widgets/IconoCLetras.dart';
 import 'package:salud_apps/features/HablarPage/HablarPage.dart';
+import 'package:salud_apps/features/Protocolo72/MenuProtocolo.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 
-class AyudaPage extends StatelessWidget {
+// 1. CAMBIAMOS A STATEFUL WIDGET PARA PODER OCULTAR EL BOTÓN
+class AyudaPage extends StatefulWidget {
   const AyudaPage({super.key});
+
+  @override
+  State<AyudaPage> createState() => _AyudaPageState();
+}
+
+class _AyudaPageState extends State<AyudaPage> {
+  // 2. CREAMOS LA VARIABLE QUE CONTROLA SI SE MUESTRA EL BOTÓN INFERIOR
+  bool _mostrarBotonInferior = true;
 
   @override
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
-      extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        centerTitle: false, // Fuerza el título a la izquierda
+        centerTitle: false,
         title: Text(
           "Yanapiri",
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -33,8 +44,6 @@ class AyudaPage extends StatelessWidget {
           PopupMenuButton<Locale>(
             icon: const Icon(Icons.language),
             onSelected: (Locale locale) {
-              // ¡Así de simple! Cambias el valor de la variable global
-              // y toda la app se actualiza al instante.
               appLocale.value = locale;
             },
             itemBuilder: (BuildContext context) => <PopupMenuEntry<Locale>>[
@@ -48,8 +57,6 @@ class AyudaPage extends StatelessWidget {
               ),
             ],
           ),
-
-          // Botón 2
           IconButton(
             icon: Icon(
               Icons.menu_book,
@@ -58,15 +65,11 @@ class AyudaPage extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.of(context).push(
-                // Quitamos el "Replacement"
-                MaterialPageRoute(
-                  builder: (context) =>
-                      Saludeducacionpage(), // Tu nueva pantalla
-                ),
+                MaterialPageRoute(builder: (context) => Saludeducacionpage()),
               );
             },
           ),
-          const SizedBox(width: 8), // Pequeño espacio al final
+          const SizedBox(width: 8),
         ],
       ),
       body: Stack(
@@ -77,18 +80,21 @@ class AyudaPage extends StatelessWidget {
               image: DecorationImage(
                 image: AssetImage(
                   esTemaOscuro
-                      ? 'assets/background_dark.png' // Imagen para el modo oscuro
-                      : 'assets/background.png', // Imagen para el modo claro
+                      ? 'assets/background_dark.png'
+                      : 'assets/background.png',
                 ),
-                fit: BoxFit.cover, // Para que cubra toda la pantalla
+                fit: BoxFit.cover,
               ),
             ),
           ),
-          // Capa 2: Tu contenido real
+
+          // Capa 2: Tu contenido real (Scroll)
           SafeArea(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 25),
               child: SingleChildScrollView(
+                // Agregamos un padding abajo para que el contenido no quede tapado por el botón flotante largo
+                padding: EdgeInsets.only(bottom: 100),
                 child: Column(
                   children: [
                     Row(
@@ -122,7 +128,6 @@ class AyudaPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 20),
-
                     Container(
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(top: 20),
@@ -167,10 +172,8 @@ class AyudaPage extends StatelessWidget {
                             color: Theme.of(
                               context,
                             ).colorScheme.surfaceContainer,
-
                             child: Container(
                               width: double.infinity,
-
                               padding: EdgeInsets.symmetric(vertical: 10),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.all(
@@ -236,33 +239,26 @@ class AyudaPage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Capa 3: Tu botón del micrófono arriba a la derecha
           Positioned(
             top: 100.0,
             right: 25.0,
             child: Material(
-              color: Colors
-                  .transparent, // Necesario para que el efecto de onda (ripple) funcione bien
+              color: Colors.transparent,
               child: InkWell(
                 onTap: () => {
-                  Navigator.of(context).push(
-                    // Quitamos el "Replacement"
-                    MaterialPageRoute(
-                      builder: (context) => HablarPage(), // Tu nueva pantalla
-                    ),
-                  ),
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => HablarPage())),
                 },
-                borderRadius: BorderRadius.circular(
-                  15,
-                ), // Mismo radio que el contenedor para la onda
+                borderRadius: BorderRadius.circular(15),
                 child: Container(
-                  // ¡AQUÍ ESTÁ TU CONTROL TOTAL DE TAMAÑO!
-                  width: 80, // Puedes hacerlo rectangular
+                  width: 80,
                   height: 80,
                   decoration: BoxDecoration(
                     color: Colors.red,
-                    borderRadius: BorderRadius.circular(
-                      100,
-                    ), // Bordes redondeados
+                    borderRadius: BorderRadius.circular(100),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
@@ -271,7 +267,6 @@ class AyudaPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Puedes poner una fila con un ícono y texto
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -290,6 +285,119 @@ class AyudaPage extends StatelessWidget {
               ),
             ),
           ),
+
+          // -------------------------------------------------------------
+          // Capa 4: ¡NUEVO BOTÓN FLOTANTE LARGO EN LA PARTE INFERIOR!
+          // -------------------------------------------------------------
+          // -------------------------------------------------------------
+          // Capa 4: ¡NUEVO BANNER ROJO DE URGENCIA!
+          // -------------------------------------------------------------
+          if (_mostrarBotonInferior)
+            Positioned(
+              bottom: 30.0,
+              left: 20.0,
+              right: 20.0,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFCA383D), // El rojo exacto de tu diseño
+                  borderRadius: BorderRadius.circular(16),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 10,
+                      offset: const Offset(0, 5),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    // Texto principal
+                    const Expanded(
+                      child: Text(
+                        "¿Acabas de sufrir\nviolencia sexual?",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w900, // Extra bold
+                          height: 1.1, // Interlineado un poco más junto
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+
+                    // --- BOTÓN "SI" ---
+                    Material(
+                      color: const Color(
+                        0xFFFFDDE0,
+                      ), // Rosado pastel de los botones
+                      borderRadius: BorderRadius.circular(10),
+                      child: InkWell(
+                        onTap: () {
+                          // Aquí pones la acción para cuando dice que SÍ
+                          // Ej: Navigator.push(...)
+                          print("El usuario presionó SI");
+                          Navigator.of(context).push(
+                            // Quitamos el "Replacement"
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  MenuProtocolo(), // Tu nueva pantalla
+                            ),
+                          );
+                        },
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 18,
+                            vertical: 14,
+                          ),
+                          child: const Text(
+                            "SI",
+                            style: TextStyle(
+                              color: Color(0xFF2B2B2B), // Texto oscuro
+                              fontWeight: FontWeight.w800,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8), // Separación entre botones
+                    // --- BOTÓN "NO" ---
+                    Material(
+                      color: const Color(0xFFFFDDE0), // Rosado pastel
+                      borderRadius: BorderRadius.circular(10),
+                      child: InkWell(
+                        onTap: () {
+                          // Al usar setState, se oculta todo este bloque
+                          setState(() {
+                            _mostrarBotonInferior = false;
+                          });
+                        },
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 15,
+                            vertical: 14,
+                          ),
+                          child: const Text(
+                            "NO",
+                            style: TextStyle(
+                              color: Color(0xFF2B2B2B),
+                              fontWeight: FontWeight.w800,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
         ],
       ),
     );

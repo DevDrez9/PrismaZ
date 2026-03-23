@@ -41,7 +41,7 @@ class BotonGrandePrincipal extends StatelessWidget {
           highlightColor: Colors.transparent,
           child: Container(
             width: AppTheme.getMainWidth80(context),
-            height: 200,
+            height: 220,
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             alignment: Alignment.center,
             child: Row(
