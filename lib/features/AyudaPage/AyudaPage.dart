@@ -9,6 +9,7 @@ import 'package:salud_apps/core/widgets/IconoCLetras.dart';
 import 'package:salud_apps/features/HablarPage/HablarPage.dart';
 import 'package:salud_apps/features/Protocolo72/MenuProtocolo.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 // 1. CAMBIAMOS A STATEFUL WIDGET PARA PODER OCULTAR EL BOTÓN
 class AyudaPage extends StatefulWidget {
@@ -26,6 +27,8 @@ class _AyudaPageState extends State<AyudaPage> {
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
 
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -33,7 +36,7 @@ class _AyudaPageState extends State<AyudaPage> {
         elevation: 0,
         centerTitle: false,
         title: Text(
-          "Yanapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Theme.of(context).colorScheme.inverseSurface,
             fontWeight: FontWeight.bold,
@@ -103,7 +106,7 @@ class _AyudaPageState extends State<AyudaPage> {
                         Container(
                           width: AppTheme.getMainWidth60(context),
                           child: Text(
-                            "Manten la calma, te acompaño",
+                            l10n.safe_calm_title,
                             textAlign: TextAlign.justify,
                             style: Theme.of(context).textTheme.headlineSmall
                                 ?.copyWith(
@@ -132,7 +135,7 @@ class _AyudaPageState extends State<AyudaPage> {
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(top: 20),
                       child: Text(
-                        "Respira profundo, hazlo con calma",
+                        l10n.safe_calm_subtitle,
                         textAlign: TextAlign.left,
                         style: Theme.of(context).textTheme.labelMedium
                             ?.copyWith(
@@ -153,7 +156,7 @@ class _AyudaPageState extends State<AyudaPage> {
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Paso a paso para calmarte",
+                              l10n.safe_calm_steps_title,
                               textAlign: TextAlign.left,
                               style: Theme.of(context).textTheme.labelMedium
                                   ?.copyWith(
@@ -183,7 +186,7 @@ class _AyudaPageState extends State<AyudaPage> {
                               child: Column(
                                 children: [
                                   IconoCLetras(
-                                    texto: "Toma asiento y relaja los hombros",
+                                    texto: l10n.safe_calm_step1,
                                     svgPath:
                                         "assets/event_seat_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                                     textColor: Theme.of(
@@ -194,7 +197,7 @@ class _AyudaPageState extends State<AyudaPage> {
                                     ).colorScheme.inverseSurface,
                                   ),
                                   IconoCLetras(
-                                    texto: "Bebe un poco de agua lentamente",
+                                    texto: l10n.safe_calm_step2,
                                     svgPath:
                                         "assets/water_drop_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                                     textColor: Theme.of(
@@ -205,8 +208,7 @@ class _AyudaPageState extends State<AyudaPage> {
                                     ).colorScheme.inverseSurface,
                                   ),
                                   IconoCLetras(
-                                    texto:
-                                        "Respira y habla con una voz tranquila",
+                                    texto: l10n.safe_calm_step3,
                                     svgPath: "assets/chat.svg",
                                     textColor: Theme.of(
                                       context,
@@ -216,8 +218,7 @@ class _AyudaPageState extends State<AyudaPage> {
                                     ).colorScheme.inverseSurface,
                                   ),
                                   IconoCLetras(
-                                    texto:
-                                        "Estira suavemente tus manos y el cuello",
+                                    texto: l10n.safe_calm_step4,
                                     svgPath:
                                         "assets/accessibility_new_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                                     textColor: Theme.of(

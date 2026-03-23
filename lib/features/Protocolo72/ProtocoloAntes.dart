@@ -8,6 +8,7 @@ import 'package:salud_apps/core/widgets/BlurContainer.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
 import 'package:salud_apps/features/Protocolo72/TarjetaRecomendacion.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 class ProtocoloAntes extends StatelessWidget {
   const ProtocoloAntes({super.key});
@@ -15,7 +16,7 @@ class ProtocoloAntes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
-
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
       appBar: AppBar(
@@ -23,7 +24,7 @@ class ProtocoloAntes extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Yamapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -97,7 +98,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Antes de 72 horas",
+                        l10n.antes_de_72h,
 
                         style: AppTextStyles.title.copyWith(
                           fontWeight: FontWeight.bold,
@@ -110,7 +111,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Fase 1: Accion Inmediata",
+                        l10n.antes_de_72h_fase1,
 
                         style: AppTextStyles.title.copyWith(
                           fontWeight: FontWeight.bold,
@@ -122,7 +123,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Preservacion de Evidencia (Vital)",
+                        l10n.antes_de_72h_adv,
 
                         style: AppTextStyles.body.copyWith(
                           color: Theme.of(context).colorScheme.inverseSurface,
@@ -131,7 +132,7 @@ class ProtocoloAntes extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     TarjetaRecomendacion(
-                      texto: "NO bañarse",
+                      texto: l10n.antes_de_72h_card1,
                       icono: Icons.shower,
                       colorIcono: Theme.of(context).colorScheme.error,
                       colorTexto: Theme.of(context).colorScheme.error,
@@ -141,7 +142,7 @@ class ProtocoloAntes extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TarjetaRecomendacion(
-                      texto: "NO lavarse los dientes/cortar las uñas",
+                      texto: l10n.antes_de_72h_card2,
                       icono: Icons.cleaning_services_outlined,
                       colorIcono: Theme.of(context).colorScheme.error,
                       colorTexto: Theme.of(context).colorScheme.error,
@@ -151,8 +152,8 @@ class ProtocoloAntes extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TarjetaRecomendacion(
-                      texto: "NO cambiarse la ropa",
-                      subtexto: "(Usar bolsa de papel si es necesario)",
+                      texto: l10n.antes_de_72h_card3,
+                      subtexto: l10n.antes_de_72h_card3_desc,
                       icono: Icons.checkroom_rounded,
                       colorIcono: Theme.of(context).colorScheme.error,
                       colorTexto: Theme.of(context).colorScheme.error,
@@ -162,7 +163,7 @@ class ProtocoloAntes extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     TarjetaRecomendacion(
-                      texto: "NO limpiar la escena",
+                      texto: l10n.antes_de_72h_card4,
                       icono: Icons.domain_disabled,
                       colorIcono: Theme.of(context).colorScheme.error,
                       colorTexto: Theme.of(context).colorScheme.error,
@@ -174,7 +175,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Paso 2: A donde acudir?",
+                        l10n.antes_de_72h_fase2,
 
                         style: AppTextStyles.title.copyWith(
                           fontWeight: FontWeight.bold,
@@ -188,7 +189,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "Paso 3: Ellos haran la denuncia por ti",
+                        l10n.antes_de_72h_fase3,
 
                         style: AppTextStyles.title.copyWith(
                           fontWeight: FontWeight.bold,
@@ -200,7 +201,7 @@ class ProtocoloAntes extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        "El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.",
+                        l10n.antes_de_72h_fase3_desc,
 
                         style: AppTextStyles.body.copyWith(
                           color: Theme.of(context).colorScheme.inverseSurface,
@@ -237,6 +238,7 @@ class TarjetaCentroSaludEstatico extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return BlurContainer(
       opacity: 0.9,
       color: Theme.of(context).colorScheme.surface,
@@ -284,8 +286,8 @@ class TarjetaCentroSaludEstatico extends StatelessWidget {
                     color: const Color(0xFFA1D19C),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Text(
-                    "Prioridad",
+                  child: Text(
+                    l10n.antes_de_72h_fase2_card1_prioridad,
                     style: TextStyle(
                       color: Color(0xFF102A14),
                       fontSize: 13,
@@ -298,8 +300,8 @@ class TarjetaCentroSaludEstatico extends StatelessWidget {
             const SizedBox(height: 16),
 
             // --- TÍTULO ---
-            const Text(
-              "Centro de Salud",
+            Text(
+              l10n.antes_de_72h_fase2_card1,
               style: TextStyle(
                 color: Color(0xFF38324A),
                 fontSize: 28,
@@ -310,8 +312,8 @@ class TarjetaCentroSaludEstatico extends StatelessWidget {
             const SizedBox(height: 12),
 
             // --- PÁRRAFO ---
-            const Text(
-              "Solicita el Kit PPE (Profilaxis Post-Exposición) para prevenir infecciones y embarazo. No requiere denuncia previa.",
+            Text(
+              l10n.antes_de_72h_fase2_card1_desc,
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 15,
@@ -335,8 +337,8 @@ class TarjetaCentroSaludEstatico extends StatelessWidget {
                     borderRadius: BorderRadius.circular(14),
                   ),
                 ),
-                child: const Text(
-                  "Ir ahora",
+                child: Text(
+                  l10n.antes_de_72h_fase2_card1_btn,
                   style: TextStyle(
                     color: Color(0xFF102A14),
                     fontSize: 20,

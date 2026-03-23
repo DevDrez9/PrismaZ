@@ -8,6 +8,7 @@ import 'package:salud_apps/core/widgets/BotonGrande.dart';
 import 'package:salud_apps/features/Mapas/PoliciaPage.dart';
 import 'package:salud_apps/features/Protocolo72/TarjetaRecomendacion.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 class ProtocoloDespues extends StatelessWidget {
   const ProtocoloDespues({super.key});
@@ -15,6 +16,7 @@ class ProtocoloDespues extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
@@ -23,7 +25,7 @@ class ProtocoloDespues extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Yamapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -101,7 +103,7 @@ class ProtocoloDespues extends StatelessWidget {
                       Container(
                         width: AppTheme.getMainWidth80(context),
                         child: Text(
-                          "Despues de 72 horas",
+                          l10n.despues72h,
 
                           style: AppTextStyles.title.copyWith(
                             fontWeight: FontWeight.bold,
@@ -114,7 +116,7 @@ class ProtocoloDespues extends StatelessWidget {
                       Container(
                         width: AppTheme.getMainWidth80(context),
                         child: Text(
-                          "Pasadas las 72 horas, el enfoque se desplaza hacia tu recuperación integral y el ejercicio de tu autonomía.",
+                          l10n.despues72h_desc,
 
                           style: AppTextStyles.body.copyWith(
                             color: Theme.of(context).colorScheme.inverseSurface,
@@ -131,7 +133,7 @@ class ProtocoloDespues extends StatelessWidget {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Atencion Medica",
+                            l10n.despues72h_tit1,
 
                             style: AppTextStyles.title.copyWith(
                               fontWeight: FontWeight.bold,
@@ -143,9 +145,8 @@ class ProtocoloDespues extends StatelessWidget {
 
                       SizedBox(height: 20),
                       TarjetaRecomendacion(
-                        texto: "Pruebas Diagnosticas",
-                        subtexto:
-                            "Seguimiento de VIH, Hepatitis y otras ITS. Es vital completar los ciclos de análisis recomendados.",
+                        texto: l10n.despues72h_tit1_card1_tit,
+                        subtexto: l10n.despues72h_tit1_card1_desc,
                         icono: Icons.biotech,
                         colorIcono: Theme.of(context).colorScheme.primary,
                         colorTexto: Theme.of(context).colorScheme.primary,
@@ -155,9 +156,8 @@ class ProtocoloDespues extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       TarjetaRecomendacion(
-                        texto: "Tratamiento de lesiones",
-                        subtexto:
-                            "Cuidado de secuelas físicas y derivación a especialistas si es necesario.",
+                        texto: l10n.despues72h_tit1_card2_tit,
+                        subtexto: l10n.despues72h_subCard2_desc,
                         icono: Icons.healing,
                         colorIcono: Theme.of(context).colorScheme.primary,
                         colorTexto: Theme.of(context).colorScheme.primary,
@@ -177,7 +177,7 @@ class ProtocoloDespues extends StatelessWidget {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Proceso legal y denuncia",
+                            l10n.despues72h_tit2,
 
                             style: AppTextStyles.subtitle.copyWith(
                               fontWeight: FontWeight.bold,
@@ -190,13 +190,7 @@ class ProtocoloDespues extends StatelessWidget {
                       SizedBox(height: 20),
 
                       Text(
-                        """Puedes acudir a cualquiera de estas instituciones para denunciar:
-• FELCV (Fuerza Especial de Lucha contra la Violencia).
-• Fiscalía o Ministerio Público.
-• Autoridades de tu comunidad (si estás en un área rural).
-
-También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defensorías de la Niñez y Adolescencia (DNA) (si eres menor de 18 años), o SIJPLU.
-""",
+                        l10n.despues72h_tit2_desc,
 
                         style: AppTextStyles.caption.copyWith(
                           color: Theme.of(context).colorScheme.inverseSurface,
@@ -225,7 +219,7 @@ También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defens
                             children: [
                               Icon(Icons.location_on, color: Color(0xff0b300d)),
                               Text(
-                                "FELCV",
+                                l10n.despues72h_tit2_btn,
                                 style: TextStyle(
                                   color: Color(0xff0b300d),
                                   fontWeight: FontWeight.bold,
@@ -247,7 +241,7 @@ También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defens
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Exige tu copia",
+                            l10n.despues72h_tit3,
 
                             style: AppTextStyles.subtitle.copyWith(
                               fontWeight: FontWeight.bold,
@@ -259,7 +253,7 @@ También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defens
                       ),
                       SizedBox(height: 20),
                       Text(
-                        "Una vez que hagas la denuncia, exige que te entreguen una copia de la denuncia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.",
+                        l10n.despues72h_tit3_desc,
 
                         style: AppTextStyles.caption.copyWith(
                           color: Theme.of(context).colorScheme.inverseSurface,
@@ -296,7 +290,7 @@ También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defens
                                       .start, // Alinea los textos a la izquierda
                                   children: [
                                     Text(
-                                      "Contencion Psicologica",
+                                      l10n.despues72h_subCard2,
                                       // 4. Te sugiero poner maxLines u overflow por si el título crece mucho
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
@@ -313,7 +307,7 @@ También puedes buscar apoyo en instituciones que te acompañarán: SLIM, Defens
                                     ), // Reduje un poco este espacio para que se vea más natural
                                     // 5. Quité el Expanded del Text interno porque ahora la columna ya sabe cuál es su límite
                                     Text(
-                                      "El impacto emocional puede aparecer días después. No estás sola. Busca apoyo en redes de contención especializada.",
+                                      l10n.despues72h_subCard2_desc,
                                       style: AppTextStyles.caption.copyWith(
                                         color: Theme.of(
                                           context,
