@@ -36,7 +36,7 @@ class CardRectanguloV extends StatelessWidget {
           highlightColor: Colors.transparent,
           child: Container(
             width: AppTheme.getMainWidth25(context),
-            height: MediaQuery.of(context).size.width * 0.4,
+            height: MediaQuery.of(context).size.width * 0.45,
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

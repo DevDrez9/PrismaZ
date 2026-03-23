@@ -42,8 +42,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get home_btProtocolo_desc => '(Janchisar jan walt\'ayäwi tuqita)';
 
   @override
-  String get modaa_title =>
-      'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?';
+  String get modal_title => 'Akanpxtwa jumataki \n ¿Kuna yanapas munasini?';
 
   @override
   String get modal_btn1 => 'Sumat amuyt\'asiñ munta';

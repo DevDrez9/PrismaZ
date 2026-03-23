@@ -6,6 +6,7 @@ import 'package:salud_apps/core/constants/language_notifier.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
 import 'package:salud_apps/features/Protocolo72/TarjetaLlamada.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 class ContactosPage extends StatelessWidget {
   const ContactosPage({super.key});
@@ -13,6 +14,7 @@ class ContactosPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
@@ -21,7 +23,7 @@ class ContactosPage extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Yamapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -89,60 +91,62 @@ class ContactosPage extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 25),
               alignment: Alignment.center,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 30),
-                  Container(
-                    width: AppTheme.getMainWidth80(context),
-                    child: Text(
-                      "Contactos de emergencia",
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 30),
+                    Container(
+                      width: AppTheme.getMainWidth80(context),
+                      child: Text(
+                        l10n.emergencia_titulo,
 
-                      style: AppTextStyles.title.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.inverseSurface,
+                        style: AppTextStyles.title.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                        ),
                       ),
                     ),
-                  ),
 
-                  SizedBox(height: 20),
-                  Container(
-                    width: AppTheme.getMainWidth80(context),
-                    child: Text(
-                      "Si te encuentras en una situación de riesgo, comunícate inmediatamente con estas instituciones. Tu seguridad es lo más importante.",
-                      style: AppTextStyles.body.copyWith(
-                        color: Theme.of(context).colorScheme.inverseSurface,
+                    SizedBox(height: 20),
+                    Container(
+                      width: AppTheme.getMainWidth80(context),
+                      child: Text(
+                        l10n.emergencia_subtitulo,
+                        style: AppTextStyles.body.copyWith(
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  TarjetaLlamada(
-                    titulo: "Policia Nacional",
-                    subtitulo: "Linea 911",
-                    numeroTelefono: "911",
-                    icono: Icons.local_police_outlined,
-                    colorBoton: Theme.of(context).colorScheme.error,
-                    colorIcono: Theme.of(context).colorScheme.error,
-                  ),
-                  SizedBox(height: 10),
-                  TarjetaLlamada(
-                    titulo: "FLCV",
-                    subtitulo: "Linea 800140348",
-                    numeroTelefono: "800140348",
-                    icono: Icons.local_police_outlined,
-                    colorBoton: Theme.of(context).colorScheme.error,
-                    colorIcono: Theme.of(context).colorScheme.error,
-                  ),
-                  SizedBox(height: 10),
-                  TarjetaLlamada(
-                    titulo: "Defensoria de la Niñez",
-                    subtitulo: "Linea 156",
-                    numeroTelefono: "156",
-                    icono: Icons.local_police_outlined,
-                    colorBoton: Theme.of(context).colorScheme.error,
-                    colorIcono: Theme.of(context).colorScheme.error,
-                  ),
-                ],
+                    SizedBox(height: 20),
+                    TarjetaLlamada(
+                      titulo: l10n.emergecia_card1,
+                      subtitulo: l10n.emergencia_card1_desc,
+                      numeroTelefono: "911",
+                      icono: Icons.local_police_outlined,
+                      colorBoton: Theme.of(context).colorScheme.error,
+                      colorIcono: Theme.of(context).colorScheme.error,
+                    ),
+                    SizedBox(height: 10),
+                    TarjetaLlamada(
+                      titulo: l10n.emergencia_card2,
+                      subtitulo: l10n.emergencia_card2_desc,
+                      numeroTelefono: "800140348",
+                      icono: Icons.local_police_outlined,
+                      colorBoton: Theme.of(context).colorScheme.error,
+                      colorIcono: Theme.of(context).colorScheme.error,
+                    ),
+                    SizedBox(height: 10),
+                    TarjetaLlamada(
+                      titulo: l10n.emergencia_card3,
+                      subtitulo: l10n.emergencia_card3_desc,
+                      numeroTelefono: "156",
+                      icono: Icons.local_police_outlined,
+                      colorBoton: Theme.of(context).colorScheme.error,
+                      colorIcono: Theme.of(context).colorScheme.error,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -40,7 +40,7 @@ class ModalBienvenida extends StatelessWidget {
                     Container(
                       width: AppTheme.getMainWidth80(context),
                       child: Text(
-                        l10n.modaa_title,
+                        l10n.modal_title,
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.headlineMedium
                             ?.copyWith(
@@ -64,8 +64,8 @@ class ModalBienvenida extends StatelessWidget {
                       },
                       child: cardBienvenida(
                         context,
-                        "Quiero calmarme",
-                        "(Contencion emocional)",
+                        l10n.modal_btn1,
+                        l10n.modal_btn1_desc,
                         Colors.white,
                         Colors.white,
                         Colors.purple,
@@ -86,12 +86,12 @@ class ModalBienvenida extends StatelessWidget {
                       },
                       child: cardBienvenida(
                         context,
-                        "Fui victima de violencia Sexual",
-                        "(Guia 72 horas)",
+                        l10n.modal_btn2,
+                        l10n.modal_btn2_desc,
                         Colors.white,
                         Colors.white,
                         Colors.red,
-                        "assets/chat.svg",
+                        "assets/warning_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                         70,
                       ),
                     ),
@@ -100,12 +100,12 @@ class ModalBienvenida extends StatelessWidget {
                       onTap: () => {Navigator.of(context).pop()},
                       child: cardBienvenida(
                         context,
-                        "Explorar app",
-                        "(Asistencia legal)",
+                        l10n.modal_btn3,
+                        l10n.modal_btn3_desc,
                         Colors.black,
                         Colors.black,
                         Colors.white,
-                        "assets/chat.svg",
+                        "assets/book_2_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                         70,
                       ),
                     ),

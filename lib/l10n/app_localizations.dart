@@ -125,13 +125,13 @@ abstract class AppLocalizations {
   /// No description provided for @home_chatBot.
   ///
   /// In es, this message translates to:
-  /// **'Chat Bot'**
+  /// **'Dra. Violeta'**
   String get home_chatBot;
 
   /// No description provided for @home_aprender.
   ///
   /// In es, this message translates to:
-  /// **'Aprender'**
+  /// **'Guia legal'**
   String get home_aprender;
 
   /// No description provided for @home_comunidad.
@@ -164,11 +164,11 @@ abstract class AppLocalizations {
   /// **'(En casos de violencia Sexual)'**
   String get home_btProtocolo_desc;
 
-  /// No description provided for @modaa_title.
+  /// No description provided for @modal_title.
   ///
   /// In es, this message translates to:
   /// **'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?'**
-  String get modaa_title;
+  String get modal_title;
 
   /// No description provided for @modal_btn1.
   ///
@@ -503,7 +503,7 @@ abstract class AppLocalizations {
   /// No description provided for @card_3.
   ///
   /// In es, this message translates to:
-  /// **'Discriminacion en Salud'**
+  /// **'Mas a futuro...'**
   String get card_3;
 
   /// Título principal de la pantalla de guía legal

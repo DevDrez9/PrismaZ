@@ -21,10 +21,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get home_asistencia_sub2 => '• ILE';
 
   @override
-  String get home_chatBot => 'Chat Bot';
+  String get home_chatBot => 'Dra. Violeta';
 
   @override
-  String get home_aprender => 'Aprender';
+  String get home_aprender => 'Guia legal';
 
   @override
   String get home_comunidad => 'Comunidad';
@@ -42,7 +42,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get home_btProtocolo_desc => '(En casos de violencia Sexual)';
 
   @override
-  String get modaa_title =>
+  String get modal_title =>
       'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?';
 
   @override
@@ -227,7 +227,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get card_2 => 'I.L.E';
 
   @override
-  String get card_3 => 'Discriminacion en Salud';
+  String get card_3 => 'Mas a futuro...';
 
   @override
   String get legal_title => 'Tu guía de acción legal';

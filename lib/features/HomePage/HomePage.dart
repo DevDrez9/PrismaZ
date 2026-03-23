@@ -160,7 +160,7 @@ class _HomepageState extends State<Homepage> {
                         BotonGrandePrincipal(
                           textoCard: l10n.home_asistencia,
                           subText: l10n.home_asistencia_sub1,
-                          imagen: l10n.home_asistencia_sub2,
+                          imagen: "assets/gavel.svg",
 
                           iconColor: Theme.of(
                             context,

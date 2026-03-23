@@ -11,6 +11,7 @@ import 'package:salud_apps/features/Protocolo72/CantactosPage.dart';
 import 'package:salud_apps/features/Protocolo72/ProtocoloAntes.dart';
 import 'package:salud_apps/features/Protocolo72/ProtocoloDespues.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
+import 'package:salud_apps/l10n/app_localizations.dart';
 
 class MenuProtocolo extends StatelessWidget {
   const MenuProtocolo({super.key});
@@ -18,7 +19,7 @@ class MenuProtocolo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
-
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       extendBodyBehindAppBar: true, // 1. Fundamental para que el cuerpo suba
       appBar: AppBar(
@@ -26,7 +27,7 @@ class MenuProtocolo extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Yamapiri",
+          l10n.home_appBarTittle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -102,7 +103,7 @@ class MenuProtocolo extends StatelessWidget {
                   Container(
                     width: AppTheme.getMainWidth80(context),
                     child: Text(
-                      "Protocolo de 72 horas",
+                      l10n.protocol_title,
 
                       style: AppTextStyles.title.copyWith(
                         fontWeight: FontWeight.bold,
@@ -114,7 +115,7 @@ class MenuProtocolo extends StatelessWidget {
                   Container(
                     width: AppTheme.getMainWidth80(context),
                     child: Text(
-                      "Estamos aqui para acompañarte.\nCada paso que tomes es valioso y estamos para guiarte a tu bienestar y obtener justicia.",
+                      l10n.protocol_subtitle,
                       style: AppTextStyles.body.copyWith(
                         color: Theme.of(context).colorScheme.inverseSurface,
                       ),
@@ -122,7 +123,7 @@ class MenuProtocolo extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   cardGrandeTexto(
-                    "Antes de las \n72 horas",
+                    l10n.procotol_car1,
                     context,
                     onTap: () => {
                       Navigator.of(context).push(
@@ -136,7 +137,7 @@ class MenuProtocolo extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   cardGrandeTexto(
-                    "Despues de las 72 horas",
+                    l10n.protocol_card2,
                     context,
                     onTap: () => {
                       Navigator.of(context).push(
@@ -151,7 +152,7 @@ class MenuProtocolo extends StatelessWidget {
                   SizedBox(height: 20),
 
                   Cardprincipal(
-                    textoCard: "Contactos de emergencia",
+                    textoCard: l10n.protocol_btnContacotsEmmergencia,
                     imagen:
                         "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
                     contenedorColor: AppTheme.colorAmariilo,
