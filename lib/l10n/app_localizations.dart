@@ -104,12 +104,6 @@ abstract class AppLocalizations {
   /// **'Yanapiru'**
   String get home_appBarTittle;
 
-  /// Banner de saludo superior
-  ///
-  /// In es, this message translates to:
-  /// **'¡Hola! Aqui te acompaño'**
-  String get home_mensajeBienvenida;
-
   /// No description provided for @home_asistencia.
   ///
   /// In es, this message translates to:
@@ -157,6 +151,60 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Quiero calmarme'**
   String get home_quieroCalma;
+
+  /// No description provided for @home_btProtocolo.
+  ///
+  /// In es, this message translates to:
+  /// **'Protocolo de 72 horas'**
+  String get home_btProtocolo;
+
+  /// No description provided for @home_btProtocolo_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'(En casos de violencia Sexual)'**
+  String get home_btProtocolo_desc;
+
+  /// No description provided for @modaa_title.
+  ///
+  /// In es, this message translates to:
+  /// **'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?'**
+  String get modaa_title;
+
+  /// No description provided for @modal_btn1.
+  ///
+  /// In es, this message translates to:
+  /// **'Quiero calmarme'**
+  String get modal_btn1;
+
+  /// No description provided for @modal_btn1_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'(Contención emocional)'**
+  String get modal_btn1_desc;
+
+  /// No description provided for @modal_btn2.
+  ///
+  /// In es, this message translates to:
+  /// **'Fui Victima de violencia sexual'**
+  String get modal_btn2;
+
+  /// No description provided for @modal_btn2_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'(Guia de 72 horas)'**
+  String get modal_btn2_desc;
+
+  /// No description provided for @modal_btn3.
+  ///
+  /// In es, this message translates to:
+  /// **'Explorar App'**
+  String get modal_btn3;
+
+  /// No description provided for @modal_btn3_desc.
+  ///
+  /// In es, this message translates to:
+  /// **'(Asistencia Legal)'**
+  String get modal_btn3_desc;
 
   /// No description provided for @card_1.
   ///

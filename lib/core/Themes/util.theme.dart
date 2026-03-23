@@ -16,34 +16,12 @@ extension TextThemeBold on TextTheme {
       titleMedium?.copyWith(fontWeight: FontWeight.bold);
 }
 
-/// 2. Tu función de creación de tema actualizada
-TextTheme createTextTheme(
-  BuildContext context,
-  String bodyFontString,
-  String displayFontString,
-) {
+TextTheme createTextTheme(BuildContext context) {
   TextTheme baseTextTheme = Theme.of(context).textTheme;
 
-  TextTheme bodyTextTheme = GoogleFonts.getTextTheme(
-    bodyFontString,
-    baseTextTheme,
-  );
-
-  TextTheme displayTextTheme = GoogleFonts.getTextTheme(
-    displayFontString,
-    baseTextTheme,
-  );
-
-  // Combinamos los temas
-  TextTheme textTheme = displayTextTheme.copyWith(
-    bodyLarge: bodyTextTheme.bodyLarge,
-    bodyMedium: bodyTextTheme.bodyMedium,
-    bodySmall: bodyTextTheme.bodySmall,
-    labelLarge: bodyTextTheme.labelLarge,
-    labelMedium: bodyTextTheme.labelMedium,
-    labelSmall: bodyTextTheme.labelSmall,
-    // Puedes mapear más estilos aquí si los necesitas
-  );
+  // Al usar poppinsTextTheme, Flutter aplica automáticamente la fuente a
+  // títulos, subtítulos, cuerpo de texto y botones de un solo golpe.
+  TextTheme textTheme = GoogleFonts.poppinsTextTheme(baseTextTheme);
 
   return textTheme;
 }

@@ -3,17 +3,12 @@ import 'package:salud_apps/core/Themes/AppTextStyle.dart';
 import 'package:salud_apps/core/Themes/AppThem.dart';
 import 'package:salud_apps/core/Themes/util.theme.dart';
 import 'package:salud_apps/core/constants/language_notifier.dart';
-import 'package:salud_apps/core/widgets/BlurContainer.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
-import 'package:salud_apps/core/widgets/CardPrincipal.dart';
-import 'package:salud_apps/features/Mapas/PoliciaPage.dart';
-import 'package:salud_apps/features/Protocolo72/CantactosPage.dart';
-import 'package:salud_apps/features/Protocolo72/ProtocoloAntes.dart';
-import 'package:salud_apps/features/Protocolo72/ProtocoloDespues.dart';
+import 'package:salud_apps/features/Protocolo72/TarjetaLlamada.dart';
 import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 
-class MenuProtocolo extends StatelessWidget {
-  const MenuProtocolo({super.key});
+class ContactosPage extends StatelessWidget {
+  const ContactosPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +89,6 @@ class MenuProtocolo extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 25),
               alignment: Alignment.center,
-
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -102,7 +96,7 @@ class MenuProtocolo extends StatelessWidget {
                   Container(
                     width: AppTheme.getMainWidth80(context),
                     child: Text(
-                      "Protocolo de 72 horas",
+                      "Contactos de emergencia",
 
                       style: AppTextStyles.title.copyWith(
                         fontWeight: FontWeight.bold,
@@ -110,63 +104,43 @@ class MenuProtocolo extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   SizedBox(height: 20),
                   Container(
                     width: AppTheme.getMainWidth80(context),
                     child: Text(
-                      "Estamos aqui para acompañarte.\nCada paso que tomes es valioso y estamos para guiarte a tu bienestar y obtener justicia.",
+                      "Si te encuentras en una situación de riesgo, comunícate inmediatamente con estas instituciones. Tu seguridad es lo más importante.",
                       style: AppTextStyles.body.copyWith(
                         color: Theme.of(context).colorScheme.inverseSurface,
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
-                  cardGrandeTexto(
-                    "Antes de las \n72 horas",
-                    context,
-                    onTap: () => {
-                      Navigator.of(context).push(
-                        // Quitamos el "Replacement"
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ProtocoloAntes(), // Tu nueva pantalla
-                        ),
-                      ),
-                    },
+                  TarjetaLlamada(
+                    titulo: "Policia Nacional",
+                    subtitulo: "Linea 911",
+                    numeroTelefono: "911",
+                    icono: Icons.local_police_outlined,
+                    colorBoton: Theme.of(context).colorScheme.error,
+                    colorIcono: Theme.of(context).colorScheme.error,
                   ),
-                  SizedBox(height: 20),
-                  cardGrandeTexto(
-                    "Despues de las 72 horas",
-                    context,
-                    onTap: () => {
-                      Navigator.of(context).push(
-                        // Quitamos el "Replacement"
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ProtocoloDespues(), // Tu nueva pantalla
-                        ),
-                      ),
-                    },
+                  SizedBox(height: 10),
+                  TarjetaLlamada(
+                    titulo: "FLCV",
+                    subtitulo: "Linea 800140348",
+                    numeroTelefono: "800140348",
+                    icono: Icons.local_police_outlined,
+                    colorBoton: Theme.of(context).colorScheme.error,
+                    colorIcono: Theme.of(context).colorScheme.error,
                   ),
-                  SizedBox(height: 20),
-
-                  Cardprincipal(
-                    textoCard: "Contactos de emergencia",
-                    imagen:
-                        "assets/local_police_24dp_8B4A61_FILL0_wght400_GRAD0_opsz24.svg",
-                    contenedorColor: AppTheme.colorAmariilo,
-                    opacityBlur: 1,
-                    colorTexto: Colors.red,
-                    iconColor: Colors.red,
-                    onTap: () => {
-                      Navigator.of(context).push(
-                        // Quitamos el "Replacement"
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ContactosPage(), // Tu nueva pantalla
-                        ),
-                      ),
-                    },
+                  SizedBox(height: 10),
+                  TarjetaLlamada(
+                    titulo: "Defensoria de la Niñez",
+                    subtitulo: "Linea 156",
+                    numeroTelefono: "156",
+                    icono: Icons.local_police_outlined,
+                    colorBoton: Theme.of(context).colorScheme.error,
+                    colorIcono: Theme.of(context).colorScheme.error,
                   ),
                 ],
               ),
@@ -176,37 +150,4 @@ class MenuProtocolo extends StatelessWidget {
       ),
     );
   }
-}
-
-// 1. Agregamos '{VoidCallback? onTap}' como parámetro opcional
-Widget cardGrandeTexto(String texto, context, {VoidCallback? onTap}) {
-  // 2. Envolvemos el BlurContainer en un GestureDetector
-  return GestureDetector(
-    onTap: onTap, // 3. Le pasamos la acción que recibimos
-    // Opcional: Esto ayuda a que detecte el clic incluso si tocas una parte transparente del contenedor
-    behavior: HitTestBehavior.opaque,
-
-    child: BlurContainer(
-      opacity: 0.5,
-      color: Theme.of(context).colorScheme.primaryContainer,
-      child: Container(
-        // Aquí me imagino que va tu texto
-        width: AppTheme.getMainWidth80(context),
-        height: 200,
-        padding: const EdgeInsets.all(16),
-        alignment: Alignment.center,
-        child: Container(
-          width: AppTheme.getMainWidth60(context),
-          alignment: Alignment.center,
-          child: Text(
-            texto,
-            textAlign: TextAlign.center,
-            style: AppTextStyles.textBig.copyWith(
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
 }

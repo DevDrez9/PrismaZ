@@ -12,9 +12,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get home_appBarTittle => 'Yanapiru';
 
   @override
-  String get home_mensajeBienvenida => '¡Hola! Aqui te acompaño';
-
-  @override
   String get home_asistencia => 'Asesoria legal';
 
   @override
@@ -37,6 +34,34 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get home_quieroCalma => 'Quiero calmarme';
+
+  @override
+  String get home_btProtocolo => 'Protocolo de 72 horas';
+
+  @override
+  String get home_btProtocolo_desc => '(En casos de violencia Sexual)';
+
+  @override
+  String get modaa_title =>
+      'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?';
+
+  @override
+  String get modal_btn1 => 'Quiero calmarme';
+
+  @override
+  String get modal_btn1_desc => '(Contención emocional)';
+
+  @override
+  String get modal_btn2 => 'Fui Victima de violencia sexual';
+
+  @override
+  String get modal_btn2_desc => '(Guia de 72 horas)';
+
+  @override
+  String get modal_btn3 => 'Explorar App';
+
+  @override
+  String get modal_btn3_desc => '(Asistencia Legal)';
 
   @override
   String get card_1 => 'Violencia Sexual';

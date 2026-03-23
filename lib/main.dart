@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final brightness = View.of(context).platformDispatcher.platformBrightness;
 
-    TextTheme textTheme = createTextTheme(context, "Inter", "Poppins");
+    TextTheme textTheme = createTextTheme(context);
 
     MaterialTheme theme = MaterialTheme(textTheme);
 

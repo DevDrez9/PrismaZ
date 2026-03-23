@@ -12,9 +12,6 @@ class AppLocalizationsAy extends AppLocalizations {
   String get home_appBarTittle => 'Yanapiri';
 
   @override
-  String get home_mensajeBienvenida => '¡Kamisaki! Nayaw yanapaskäma';
-
-  @override
   String get home_asistencia => 'Ley tuqit yanapaña';
 
   @override
@@ -37,6 +34,34 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get home_quieroCalma => 'Sumat amuyt\'asiñäni';
+
+  @override
+  String get home_btProtocolo => '72 pacha thakhi';
+
+  @override
+  String get home_btProtocolo_desc => '(Janchisar jan walt\'ayäwi tuqita)';
+
+  @override
+  String get modaa_title =>
+      'Estamos aqui para ti \n ¿Qué tipo de ayuda necesitas?';
+
+  @override
+  String get modal_btn1 => 'Sumat amuyt\'asiñ munta';
+
+  @override
+  String get modal_btn1_desc => '(Chuymachäwi)';
+
+  @override
+  String get modal_btn2 => 'Janchisaru jan walt\'ayatätwa';
+
+  @override
+  String get modal_btn2_desc => '(72 pacha thakhi)';
+
+  @override
+  String get modal_btn3 => 'Yanapiri uñt\'aña';
+
+  @override
+  String get modal_btn3_desc => '(Ley tuqit yanapa)';
 
   @override
   String get card_1 => 'Janchisar jan walt\'ayäwi';

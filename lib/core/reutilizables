@@ -1,15 +1,15 @@
 /** 
 import 'package:flutter/material.dart';
 import 'package:salud_apps/core/Themes/util.theme.dart';
+import 'package:salud_apps/core/constants/language_notifier.dart';
 import 'package:salud_apps/core/widgets/BotonGrande.dart';
+import 'package:salud_apps/features/SaludEducacion/SaludEducacionPage.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
-
     final esTemaOscuro = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
@@ -19,7 +19,7 @@ class Homepage extends StatelessWidget {
         elevation: 0,
         centerTitle: false, // Fuerza el título a la izquierda
         title: Text(
-          "Prisma Z",
+          "Yamapiri",
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -27,25 +27,40 @@ class Homepage extends StatelessWidget {
           ),
         ),
         actions: [
-          // Botón 1
-          IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: Theme.of(context).colorScheme.primaryContainer,
-            ),
-            onPressed: () {
-              print("Notificaciones");
+          PopupMenuButton<Locale>(
+            icon: const Icon(Icons.language),
+            onSelected: (Locale locale) {
+              // ¡Así de simple! Cambias el valor de la variable global
+              // y toda la app se actualiza al instante.
+              appLocale.value = locale;
             },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<Locale>>[
+              const PopupMenuItem<Locale>(
+                value: Locale('es', ''),
+                child: Text('Español'),
+              ),
+              const PopupMenuItem<Locale>(
+                value: Locale('ay', ''),
+                child: Text('Aymara'),
+              ),
+            ],
           ),
+
           // Botón 2
           IconButton(
             icon: Icon(
-              Icons.person_2,
-              color: Theme.of(context).colorScheme.primaryContainer,
+              Icons.menu_book,
+              color: Theme.of(context).colorScheme.inverseSurface,
               size: 30,
             ),
             onPressed: () {
-              print("Configuración");
+              Navigator.of(context).push(
+                // Quitamos el "Replacement"
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Saludeducacionpage(), // Tu nueva pantalla
+                ),
+              );
             },
           ),
           const SizedBox(width: 8), // Pequeño espacio al final
@@ -57,7 +72,7 @@ class Homepage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                 image: AssetImage(
+                image: AssetImage(
                   esTemaOscuro
                       ? 'assets/background_dark.png' // Imagen para el modo oscuro
                       : 'assets/background.png', // Imagen para el modo claro
@@ -66,15 +81,13 @@ class Homepage extends StatelessWidget {
               ),
             ),
           ),
+
           // Capa 2: Tu contenido real
-          
-          child:SafeArea(
-          child: Container(
+          SafeArea(
+            child: Container(
               margin: EdgeInsets.symmetric(horizontal: 25),
-            child: Column(children: [Row(children: [
-                   
-                  ],
-                )])),
+              child: Column(children: []),
+            ),
           ),
         ],
       ),
