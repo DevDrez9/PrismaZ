@@ -1,6 +1,6 @@
 {
 "@@locale": "es",
-  "home_appBarTittle": "Yanapiru",
+  "home_appBarTittle": "Yanapiri",
   "@home_appBarTittle": { "description": "Nombre de la app en la barra superior" },
 
   "home_asistencia": "Asesoria legal",
@@ -27,6 +27,62 @@
   "modal_btn2_desc": "(Guia de 72 horas)",
   "modal_btn3": "Explorar App",
   "modal_btn3_desc": "(Asistencia Legal)",
+
+  "protocol_title": "Protocolo de 72 horas",
+  "protocol_subtitle": "Estamos aqui para acompañarte.\nCada paso que tomes es valioso y estamos para guiarte a tu bienestar y obtener justicia.",
+  "procotol_car1": "Antes de 72 horas",
+  "protocol_card2": "Después de 72 horas",
+  "protocol_btnContacotsEmmergencia": "Contactos de emergencia",
+
+
+  "emergencia_titulo": "Contactos de emergencia",
+  "emergencia_subtitulo": "Si te encuentras en una situación de riesgo, comunícate inmediatamente con estas instituciones. Tu seguridad es lo más importante.",
+  "emergecia_card1": "Emergencias Policiales",
+  "emergencia_card1_desc": "Llama al 911 para asistencia inmediata.",
+  "emergencia_card2": "Línea de Violencia contra la Mujer",
+  "emergencia_card2_desc": "Llama al 800-10-1111 para apoyo especializado.",
+  "emergencia_card3": "Línea de Salud Sexual",
+  "emergencia_card3_desc": "Llama al 800-10-8004 para información y asesoría sobre salud sexual.",
+
+
+"antes_de_72h": "Antes de 72 horas",
+  "antes_de_72h_fase1": "Fase 1: Accion Inmediata",
+  "antes_de_72h_adv": "Preservacion de Evidencia (Vital)",
+  "antes_de_72h_card1": "NO te bañes",
+  "antes_de_72h_card2": "NO lavarse los dientes no cortarse las uñas",
+  "antes_de_72h_card3": "NO cambies tu ropa",
+  "antes_de_72h_card3_desc": "(Si es posible, guárdala en una bolsa)",
+  "antes_de_72h_card4": "NO limpiar la escena del delito",
+
+  "antes_de_72h_fase2": "Fase 2: A donde ir",
+  "antes_de_72h_fase2_card1": "Centro de Salud",
+  "antes_de_72h_fase2_card1_prioridad": "Prioridad",
+  "antes_de_72h_fase2_card1_desc": "Solicita el Kit PPE (Profilaxis Post-Exposición) para prevenir infecciones y embarazo. No requiere denuncia previa.",
+  "antes_de_72h_fase2_card1_btn": "Ir ahora",
+
+  "antes_de_72h_fase3": "Ellos haran la denuncia por ti",
+  "antes_de_72h_fase3_desc": "El personal médico tiene la obligación de reportar el delito a las autoridades y darte toda la atención que necesitas.",
+
+  "despues72h": "Después de 72 horas",
+  "despues72h_desc": "Pasadas las 72 horas, el enfoque se desplaza hacia tu recuperación integral y el ejercicio de tu autonomía.",
+  "despues72h_tit1": "Atención Médica Integral",
+  "despues72h_tit1_card1_tit": "Pruebas Diagnosticas",
+  "despues72h_tit1_card1_desc": "Seguimiento de VIH, Hepatitis y otras ITS. Es vital completar los ciclos de análisis recomendados.",
+  "despues72h_tit1_card2_tit": "Tratamiento de lesiones",
+  "despues72h_tit1_card2_desc": "Cuidado de secuelas físicas y derivación a especialistas si es necesario.",
+  "despues72h_card_apoyo": "Derechos Reproductivos I.L.E",
+  "despues72h_card_apoyo_link": "Tienes derecho a la interrupción legal del embarazo (ILE).",
+  "despues72h_subCard_tit": "En caso de Violencia Sexual",
+  "despues72h_subCard_desc": "• No se requiere orden Judicial \n",
+  "despues72h_subCard_desc2": "• Solo es necesaria la copia de la Denuncia Policial \n",
+  "despues72h_tit2": "Proceso Legal y Denuncia",
+  "despues72h_tit2_desc":"Puedes acudir a cualquiera de estas instituciones para denunciar:\n  • FELCV.\n  • Fiscalía o Ministerio Público.\n  • Autoridades de tu comunidad.\n También puedes buscar apoyo en:\n  • SLIM, Defensorías (DNA) o SIJPLU.",
+  "despues72h_tit2_btn": "FELCV",
+  "despues72h_tit3": "Exige tu copia",
+  "despues72h_tit3_desc": "Una vez que hagas la denuncia, exige que te entreguen una copia de la denuncia. Este documento es tuyo, es tu derecho y lo necesitarás más adelante.",
+  "despues72h_subCard2":"Ayuda Psicologica",
+  "despues72h_subCard2_desc":"El impacto emocional puede aparecer días después. No estás sola. Busca apoyo en redes de contención especializada.",
+
 
   "card_1":"Violencia Sexual",
   "card_2":"I.L.E",

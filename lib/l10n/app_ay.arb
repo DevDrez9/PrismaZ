@@ -25,6 +25,63 @@
   "modal_btn3": "Yanapiri uñt'aña",
   "modal_btn3_desc": "(Ley tuqit yanapa)",
 
+
+  "protocol_title": "72 pacha thakhi",
+  "protocol_subtitle": "Akanpxtwa juman yanapañataki.\nTaqi thakhinakax juman munañamawa, sum jakañamatakisa ukat justicia jikxatañamatakis yanapaskäma.",
+  "procotol_car1": "72 pacha janïr pasana",
+  "protocol_card2": "72 pacha pasatxaruxa",
+  "protocol_btnContacotsEmmergencia": "Yanapa jakt'äwinaka",
+
+
+  "emergencia_titulo": "Yanapa jakt'äwinaka",
+  "emergencia_subtitulo": "Jan wal uñjasisna ukhax aka jakt'äwinakar jawst'ama. Juman jakañamax wali askiwa.",
+  "emergecia_card1": "Polician yanapapa",
+  "emergencia_card1_desc": "911 jakt'äwir jawst'ama yanapa katuñataki.",
+  "emergencia_card2": "Warminakar yanapañataki",
+  "emergencia_card2_desc": "800-10-1111 jakt'äwir jawst'ama.",
+  "emergencia_card3": "Janchis uñt'ayasiñataki",
+  "emergencia_card3_desc": "800-10-8004 jakt'äwir jawst'ama yanapa katuñataki.",
+
+
+  "antes_de_72h": "72 pacha janïr pasana",
+  "antes_de_72h_fase1": "1 T'aqa: Chiqak lurañataki",
+  "antes_de_72h_adv": "Uñacht'ayäwi imaña (Wali askiwa)",
+  "antes_de_72h_card1": "JAN janchis t'axsuñamati",
+  "antes_de_72h_card2": "JAN lakanak t'axsuñamati, jan sillunak khariñamati",
+  "antes_de_72h_card3": "JAN isinaka mayjt'ayñamati",
+  "antes_de_72h_card3_desc": "(Mä bolsar imatäñapawa)",
+  "antes_de_72h_card4": "JAN kunas t'unjañamati jan walt'at pachana",
+
+  "antes_de_72h_fase2": "2 T'aqa: Kawksar sarasmäxa",
+  "antes_de_72h_fase2_card1": "Qulla uta",
+  "antes_de_72h_fase2_card1_prioridad": "Nayrïri",
+  "antes_de_72h_fase2_card1_desc": "Kit PPE (Profilaxis) mayiñama usunakat jark'aqasiñataki. Janiw denuncia munasikiti.",
+  "antes_de_72h_fase2_card1_btn": "Jichhak sarama",
+
+  "antes_de_72h_fase3": "Jupanakaw denuncia lurapxani",
+  "antes_de_72h_fase3_desc": "Qullirinakax jilaqatanakaruw yatiyapxani kunas pasatama uka tuqita.",
+
+  "despues72h": "72 pacha pasatxaruxa",
+  "despues72h_desc": "72 pacha pasatxaruxa, janchim sum uñjasiñama ukhamarak munañamarjam amtañamawa.",
+  "despues72h_tit1": "Taqpacha qulla uñjawi",
+  "despues72h_tit1_card1_tit": "Yant'äwinaka",
+  "despues72h_tit1_card1_desc": "VIH, Hepatitis ukat yaqha usunaka uñjañataki.",
+  "despues72h_tit1_card2_tit": "Janchim uñjawi",
+  "despues72h_tit1_card2_desc": "Janchiman usunaka qullatäñapawa.",
+  "despues72h_card_apoyo": "Derechos Reproductivos I.L.E",
+  "despues72h_card_apoyo_link": "Derecho churatawa wawa pichuyañataki (ILE).",
+  "despues72h_subCard_tit": "Jan walt'ayasiñ utjki ukhaxa",
+  "despues72h_subCard_desc": "• Janiw juezan munañapa munasikiti \n",
+  "despues72h_subCard_desc2": "• Denunciaman papilapakiw munasini \n",
+  "despues72h_tit2": "Denuncia luraña",
+  "despues72h_tit2_desc":"Aka utanakaruw sarasma:\n  • FELCV.\n  • Fiscalía.\n  • Aylluman jilaqatanaka.\n SLIM ukat Defensoría ukanakas yanapätamwa.",
+  "despues72h_tit2_btn": "FELCV",
+  "despues72h_tit3": "Papilama mayiñama",
+  "despues72h_tit3_desc": "Denuncia luratasax, mä copia mayiñamawa. Uka papilax juman munañamawa.",
+  "despues72h_subCard2":"Chuymachäwi",
+  "despues72h_subCard2_desc":"Llakisiñax jutaspawa. Janiw sapaäkstati. Yanapa thaqhañamawa.",
+
+
   "card_1": "Janchisar jan walt'ayäwi",
   "card_2": "I.L.E (Wawa pichuyaña)",
   "card_3": "Qulla utan jisk'achäwi",
