@@ -4,8 +4,8 @@
   "@home_appBarTittle": { "description": "Nombre de la app en la barra superior" },
 
   "home_asistencia": "Asesoria legal",
-  "home_asistencia_sub1": "• Violencia Sexual",
-  "home_asistencia_sub2": "• ILE",
+  "home_asistencia_sub1": "• Violencia Sexual\n • ILE\n • Otros temas legales",
+
 
   "home_chatBot": "Dra. Violeta",
   "home_aprender": "Guia legal",
@@ -65,7 +65,7 @@
 
   "despues72h": "Después de 72 horas",
   "despues72h_desc": "Pasadas las 72 horas, el enfoque se desplaza hacia tu recuperación integral y el ejercicio de tu autonomía.",
-  "despues72h_tit1": "Atención Médica Integral",
+  "despues72h_tit1": "Atención Médica",
   "despues72h_tit1_card1_tit": "Pruebas Diagnosticas",
   "despues72h_tit1_card1_desc": "Seguimiento de VIH, Hepatitis y otras ITS. Es vital completar los ciclos de análisis recomendados.",
   "despues72h_tit1_card2_tit": "Tratamiento de lesiones",
